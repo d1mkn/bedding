@@ -1,0 +1,84 @@
+<header>
+  <div class="container header__container">
+    <nav>
+      <ul class="navigation__list">
+        <li class="navigation__item js-dropdown">
+          <button class="navigation__item-button">Каталог</button>
+          <div class="navigation__dropdown-wrap js-hide-dropdown">
+            <ul class="navigation__dropdown">
+              <li class="navigation__dropdown-item">
+                <a href="#">Постільна білизна</a>
+              </li>
+              <li class="navigation__dropdown-item"><a href="#">Пледи</a></li>
+              <li class="navigation__dropdown-item"><a href="#">Рушники</a></li>
+              <li class="navigation__dropdown-item">
+                <a href="#">Покривала</a>
+              </li>
+              <li class="navigation__dropdown-item">
+                <a href="#">Акційні товари</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="navigation__item js-dropdown">
+          <button class="navigation__item-button">Інформація</button>
+          <div class="navigation__dropdown-wrap js-hide-dropdown">
+            <ul class="navigation__dropdown">
+              <li class="navigation__dropdown-item">
+                <a href="#">Популярні питання</a>
+              </li>
+              <li class="navigation__dropdown-item">
+                <a href="#">Контакти</a>
+              </li>
+              <li class="navigation__dropdown-item"><a href="#">Про нас</a></li>
+              <li class="navigation__dropdown-item"><a href="#">Тканини</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <a href=".">
+      <svg class="header__logo" width="188" height="50">
+        <use href="./images/icons.svg#logo"></use>
+      </svg>
+    </a>
+    <div class="header__controls">
+      <ul class="header__controls-list">
+        <li class="header__controls-item">
+          <button class="js-search-btn">
+            <svg class="header__controls-item-icon" width="24" height="24">
+              <use href="./images/icons.svg#search"></use>
+            </svg>
+          </button>
+          <form class="search__form js-search-form">
+            <button class="search__submit-btn" type="submit">
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#search"></use>
+              </svg>
+            </button>
+            <input
+              class="search__form-input"
+              type="text"
+              placeholder="Пошук по сайту"
+              aria-label="Пошук по сайту"
+            />
+          </form>
+        </li>
+        <li class="header__controls-item">
+          <a href="#">
+            <svg class="header__controls-item-icon" width="24" height="24">
+              <use href="./images/icons.svg#cart"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="header__controls-item">
+          <a href="#">
+            <svg class="header__controls-item-icon" width="24" height="24">
+              <use href="./images/icons.svg#user"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

@@ -1,1 +1,15 @@
-@import './common';
+// normalize
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+// utils
+@import './utils/mixins';
+@import './utils/variables';
+
+// common
+@import './common/common';
+@import './common/reset';
+@import './common/fonts';
+@import './common/container';
+
+// header
+@import './components/header';

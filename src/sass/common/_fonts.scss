@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: bold;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Montserrat Bold'),
+    url('/src/fonts/Montserrat-Bold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Montserrat SemiBold'),
+    url('/src/fonts/Montserrat-SemiBold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Montserrat Medium'),
+    url('/src/fonts/Montserrat-Medium.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Montserrat Medium Italic'),
+    url('/src/fonts/Montserrat-MediumItalic.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat Regular'),
+    url('/src/fonts/Montserrat-Regular.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Roboto Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto Serif Regular'),
+    url('/src/fonts/RobotoSerif-Regular.ttf') format('ttf');
+}
