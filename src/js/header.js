@@ -26,3 +26,13 @@ function headerSearchForm() {
   });
 }
 headerSearchForm();
+
+function headerProfile() {
+  const profileBtn = refs.profileBtn;
+  const profileDropdown = refs.profileDropdown;
+
+  profileBtn.addEventListener('click', () => {
+    profileDropdown.classList.toggle('profile__dropdown--visible');
+  });
+}
+headerProfile();

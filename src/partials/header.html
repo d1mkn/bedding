@@ -58,7 +58,7 @@
             </button>
             <input
               class="search__form-input"
-              type="text"
+              type="search"
               placeholder="Пошук по сайту"
               aria-label="Пошук по сайту"
             />
@@ -72,11 +72,21 @@
           </a>
         </li>
         <li class="header__controls-item">
-          <a href="#">
+          <button class="js-profile-btn">
             <svg class="header__controls-item-icon" width="24" height="24">
               <use href="./images/icons.svg#user"></use>
             </svg>
-          </a>
+          </button>
+          <div class="navigation__dropdown-wrap">
+            <ul class="profile__dropdown">
+              <li class="profile__dropdown-item">
+                <a href="#">Вхід</a>
+              </li>
+              <li class="profile__dropdown-item">
+                <a href="#">Реєстрація</a>
+              </li>
+            </ul>
+          </div>
         </li>
       </ul>
     </div>

@@ -65,6 +65,10 @@ header {
 }
 
 .header__controls-item {
+  display: flex;
+  align-items: center;
+  height: 70px;
+
   &-icon:hover {
     fill: $dark-blue;
   }
@@ -132,5 +136,39 @@ header {
 
   &:hover {
     fill: $dark-blue;
+  }
+}
+
+.profile__dropdown-wrap {
+  background-color: $white;
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+}
+
+.profile__dropdown {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  height: fit-content;
+
+  padding: 20px;
+
+  border: 1px solid $light-grey;
+  border-radius: 0px 0px 5px 5px;
+
+  font-size: 20px;
+}
+
+.profile__dropdown--visible {
+  display: flex;
+}
+
+.profile__dropdown-item {
+  display: inline-block;
+  white-space: nowrap;
+
+  &:hover {
+    color: $dark-blue;
   }
 }
