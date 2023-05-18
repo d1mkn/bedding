@@ -4,8 +4,15 @@
 
 .single-category__title-wrap {
   display: flex;
+  align-items: baseline;
   gap: 15px;
   margin-bottom: 30px;
+}
+
+.single-category__title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: calc(39px / 32px);
 }
 
 .single-category__list {
@@ -13,6 +20,6 @@
   gap: 20px;
 }
 
-.single-category__nav-arrow{
+.single-category__nav-arrow {
   fill: #000;
 }
