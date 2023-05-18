@@ -11,7 +11,10 @@ header {
   background-color: $white;
 
   nav {
-    width: 219px;
+    width: 716px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   button {
