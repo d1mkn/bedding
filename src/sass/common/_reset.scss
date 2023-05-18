@@ -37,3 +37,10 @@ button {
   margin: 0;
   cursor: pointer;
 }
+
+.button {
+  padding: 15px 30px;
+  background-color: $main-blue;
+  border: 1px solid $light-grey;
+  border-radius: 5px;
+}

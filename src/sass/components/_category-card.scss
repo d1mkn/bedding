@@ -1,0 +1,24 @@
+.category__item-img {
+  display: block;
+  width: 100%;
+  object-fit: none;
+  border: 1px solid $light-grey;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.category__item-link {
+  &:hover .category__item-desc,
+  &:focus .category__item-desc {
+    background-color: $main-blue;
+  }
+}
+
+.category__item-desc {
+  display: block;
+  padding: 15px 0px;
+
+  font-weight: 500;
+
+  border: 1px solid $light-grey;
+  border-radius: 0px 0px 5px 5px;
+}

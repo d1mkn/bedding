@@ -1,6 +1,9 @@
 // normalize
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
+// fonts
+@import './common/fonts';
+
 // utils
 @import './utils/mixins';
 @import './utils/variables';
@@ -8,8 +11,18 @@
 // common
 @import './common/common';
 @import './common/reset';
-@import './common/fonts';
 @import './common/container';
+
+// vendors
+@import './vendors/visually-hidden';
 
 // header
 @import './components/header';
+
+// hero
+@import './components/hero';
+
+// categories
+@import './components/categories';
+@import './components/category-card';
+@import './components/single-category';

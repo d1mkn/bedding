@@ -4,7 +4,7 @@
       <ul class="navigation__list">
         <li class="navigation__item js-dropdown">
           <button class="navigation__item-button">Каталог</button>
-          <div class="navigation__dropdown-wrap js-hide-dropdown">
+          <div class="navigation__dropdown-wrap visually-hidden">
             <ul class="navigation__dropdown">
               <li class="navigation__dropdown-item">
                 <a href="#">Постільна білизна</a>
@@ -22,7 +22,7 @@
         </li>
         <li class="navigation__item js-dropdown">
           <button class="navigation__item-button">Інформація</button>
-          <div class="navigation__dropdown-wrap js-hide-dropdown">
+          <div class="navigation__dropdown-wrap visually-hidden">
             <ul class="navigation__dropdown">
               <li class="navigation__dropdown-item">
                 <a href="#">Популярні питання</a>
@@ -37,11 +37,13 @@
         </li>
       </ul>
     </nav>
-    <a href=".">
-      <svg class="header__logo" width="188" height="50">
-        <use href="./images/icons.svg#logo"></use>
-      </svg>
-    </a>
+    <div class="logo-wrap">
+      <a href=".">
+        <svg class="header__logo" width="188" height="50">
+          <use href="./images/icons.svg#logo"></use>
+        </svg>
+      </a>
+    </div>
     <div class="header__controls">
       <ul class="header__controls-list">
         <li class="header__controls-item">
@@ -65,24 +67,24 @@
           </form>
         </li>
         <li class="header__controls-item">
-          <a href="#">
-            <svg class="header__controls-item-icon" width="24" height="24">
+          <a class="cart-link" href="#">
+            <svg class="header__controls-item-icon" width="24" height="70">
               <use href="./images/icons.svg#cart"></use>
             </svg>
           </a>
         </li>
-        <li class="header__controls-item">
-          <button class="js-profile-btn">
+        <li class="header__controls-item js-dropdown">
+          <button>
             <svg class="header__controls-item-icon" width="24" height="24">
               <use href="./images/icons.svg#user"></use>
             </svg>
           </button>
-          <div class="navigation__dropdown-wrap">
-            <ul class="profile__dropdown">
-              <li class="profile__dropdown-item">
+          <div class="navigation__dropdown-wrap visually-hidden">
+            <ul class="navigation__dropdown">
+              <li class="navigation__dropdown-item">
                 <a href="#">Вхід</a>
               </li>
-              <li class="profile__dropdown-item">
+              <li class="navigation__dropdown-item">
                 <a href="#">Реєстрація</a>
               </li>
             </ul>

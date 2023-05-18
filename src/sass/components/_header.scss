@@ -9,6 +9,14 @@ header {
 
   border-bottom: 1px solid $black;
   background-color: $white;
+
+  nav {
+    width: 219px;
+  }
+
+  button {
+    height: 100%;
+  }
 }
 
 .header__container {
@@ -31,13 +39,13 @@ header {
   height: 70px;
   position: relative;
 
-  font-family: $font-main;
   font-size: 20px;
   font-weight: 400;
   line-height: calc(24 / 20);
 
-  &:hover {
-    font-weight: 500;
+  &:hover button,
+  & button:focus {
+    font-weight: 600;
   }
 
   &:hover::after {
@@ -49,10 +57,6 @@ header {
     height: 3px;
     background-color: $dark-blue;
     border-radius: 0px 0px 3px 3px;
-  }
-
-  &-button {
-    height: 70px;
   }
 }
 
@@ -70,7 +74,8 @@ header {
   align-items: center;
   height: 70px;
 
-  &-icon:hover {
+  &:hover .header__controls-item-icon,
+  & button:focus .header__controls-item-icon {
     fill: $dark-blue;
   }
 }
@@ -80,6 +85,9 @@ header {
   position: absolute;
   top: 100%;
   z-index: 1;
+
+  border: 1px solid $light-grey;
+  border-radius: 0px 0px 5px 5px;
 }
 
 .navigation__dropdown {
@@ -89,14 +97,17 @@ header {
   height: fit-content;
 
   padding: 20px;
-
-  border: 1px solid $light-grey;
-  border-radius: 0px 0px 5px 5px;
 }
 
 .navigation__dropdown-item {
   display: inline-block;
   white-space: nowrap;
+
+  align-items: center;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  position: relative;
 
   &:hover {
     color: $dark-blue;
@@ -111,6 +122,7 @@ header {
   z-index: 1;
 
   display: none;
+  align-items: center;
   position: absolute;
   top: 70px;
   left: 0;
@@ -137,39 +149,5 @@ header {
 
   &:hover {
     fill: $dark-blue;
-  }
-}
-
-.profile__dropdown-wrap {
-  background-color: $white;
-  position: absolute;
-  top: 100%;
-  z-index: 1;
-}
-
-.profile__dropdown {
-  display: none;
-  flex-direction: column;
-  gap: 20px;
-  height: fit-content;
-
-  padding: 20px;
-
-  border: 1px solid $light-grey;
-  border-radius: 0px 0px 5px 5px;
-
-  font-size: 20px;
-}
-
-.profile__dropdown--visible {
-  display: flex;
-}
-
-.profile__dropdown-item {
-  display: inline-block;
-  white-space: nowrap;
-
-  &:hover {
-    color: $dark-blue;
   }
 }

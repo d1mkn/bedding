@@ -4,14 +4,14 @@ function headerDropdown() {
   const dropdownItems = refs.dropdownItems;
 
   dropdownItems.forEach(item => {
-    const dropdownMenu = item.querySelector('.js-hide-dropdown');
+    const dropdownMenu = item.querySelector('.visually-hidden');
 
     item.addEventListener('mouseenter', () => {
-      dropdownMenu.style.display = 'block';
+      dropdownMenu.classList.remove('visually-hidden');
     });
 
     item.addEventListener('mouseleave', () => {
-      dropdownMenu.style.display = 'none';
+      dropdownMenu.classList.add('visually-hidden');
     });
   });
 }
@@ -26,13 +26,3 @@ function headerSearchForm() {
   });
 }
 headerSearchForm();
-
-function headerProfile() {
-  const profileBtn = refs.profileBtn;
-  const profileDropdown = refs.profileDropdown;
-
-  profileBtn.addEventListener('click', () => {
-    profileDropdown.classList.toggle('profile__dropdown--visible');
-  });
-}
-headerProfile();
