@@ -2,6 +2,7 @@
   display: block;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 
   &:hover .single-category__item-overlay,
   &:focus .single-category__item-overlay {
