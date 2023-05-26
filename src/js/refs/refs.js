@@ -11,4 +11,6 @@ export const refs = {
   closeButton: document.querySelector('.modal__dialog-close'),
   // faq
   faqItems: document.querySelectorAll('.faq__item'),
+  // fabrics
+  fabricsItems: document.querySelectorAll('.fabrics__item'),
 };
