@@ -1,1 +1,1 @@
-import './js/scripts/scripts';
+import './js/scripts/scriptsMainPage';
