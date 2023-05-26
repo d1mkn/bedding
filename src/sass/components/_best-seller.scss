@@ -1,44 +1,109 @@
-.best-seller{
-  padding: 45px 0px;
+.best-seller {
   background-color: $pastel;
-  margin-bottom: 50px;
+
+  @include tablet {
+    margin-bottom: 40px;
+    padding: 25px 0px;
+  }
+
+  @include desktop {
+    margin-bottom: 50px;
+    padding: 45px 0px;
+  }
 }
 
 .best-seller-wrap {
   display: flex;
-  gap: 60px;
+
+  @include tablet {
+    gap: 15px;
+  }
+
+  @include desktop {
+    gap: 60px;
+  }
+}
+
+.best-seller__img {
+  @include tablet {
+    width: 325px;
+    height: 300px;
+  }
+
+  @include desktop {
+    width: 610px;
+    height: 370px;
+  }
 }
 
 .best-seller-main {
   display: flex;
   flex-direction: column;
-  gap: 7px;
   margin-bottom: 8px;
+
+  @include tablet {
+    gap: 5px;
+  }
+
+  @include desktop {
+    gap: 7px;
+  }
 }
 
 .best-seller-section__title {
   color: $dark-blue;
-  font-size: 32px;
   font-weight: 600;
-  line-height: calc(39px / 32px);
+
+  @include tablet {
+    font-size: 30px;
+    line-height: calc(37px / 30px);
+  }
+
+  @include desktop {
+    font-size: 32px;
+    line-height: calc(39px / 32px);
+  }
 }
 
 .best-seller__title {
   font-weight: 500;
-  font-size: 24px;
-  line-height: calc(29px / 24px);
+
+  @include tablet {
+    font-size: 20px;
+    line-height: calc(24px / 20px);
+  }
+
+  @include desktop {
+    font-size: 24px;
+    line-height: calc(29px / 24px);
+  }
 }
 
 .best-seller__price {
   font-weight: 500;
-  font-size: 20px;
-  line-height: calc(24px / 20px);
+
+  @include tablet {
+    font-size: 16px;
+    line-height: calc(20px / 16px);
+  }
+
+  @include desktop {
+    font-size: 20px;
+    line-height: calc(24px / 20px);
+  }
 }
 
 .best-seller__raiting {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+
+  @include tablet {
+    margin-bottom: 10px;
+  }
+
+  @include desktop {
+    margin-bottom: 10px;
+  }
 
   a {
     text-decoration: revert;
@@ -51,8 +116,16 @@
 }
 
 .best-seller__desc {
-  margin-bottom: 30px;
   line-height: 1.3;
+
+  @include tablet {
+    margin-bottom: 24px;
+    font-size: 15px;
+  }
+
+  @include desktop {
+    margin-bottom: 30px;
+  }
 }
 
 .best-seller__btn {
@@ -69,5 +142,9 @@
   &:hover,
   &:focus {
     background-color: $dark-blue;
+  }
+
+  @include less-then-desktop {
+    display: none;
   }
 }

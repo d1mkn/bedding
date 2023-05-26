@@ -1,16 +1,47 @@
 .categories {
-  margin-bottom: 90px;
+  margin-bottom: 40px;
+
+  @include desktop {
+    margin-bottom: 90px;
+  }
 }
 
 .categories-wrap {
   text-align: center;
+
+  @include tablet {
+    padding: 0px 52px;
+  }
+
+  @include desktop {
+    padding: 0;
+  }
 }
 
 .categories__title {
-  margin-bottom: 40px;
+  @include tablet {
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: calc(37px / 30px);
+  }
+
+  @include desktop {
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: calc(39px / 32px);
+  }
 }
 
 .categories__list {
   display: flex;
-  gap: 20px;
+
+  @include tablet {
+    gap: 15px;
+  }
+
+  @include desktop {
+    gap: 20px;
+  }
 }

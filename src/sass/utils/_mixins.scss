@@ -24,7 +24,7 @@
 }
 
 @mixin less-then-desktop {
-  @media screen and (max-width: 1240px) {
+  @media screen and (max-width: 1239px) {
     @content;
   }
 }

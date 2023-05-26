@@ -1,31 +1,56 @@
 .hero__overlay {
   max-width: 1700px;
-  height: 600px;
-  padding-top: 84px;
+  height: 320px;
+  padding-top: 48px;
 
-  background: url(../images/hero-bg.jpg);
+  background: url(../images/hero-bg.jpg) center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 0px 0px 5px 5px;
+
+  @include desktop {
+    height: 600px;
+    padding-top: 84px;
+  }
 }
 
 .hero__content-wrap {
-  margin-left: 229px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
+  
+  @include tablet {
+    width: 768px;
+    padding: 0px 52px;
+  }
+
+  @include desktop {
+    width: 1240px;
+    margin-bottom: 30px;
+    padding: 0;
+  }
 }
 
 .hero {
   max-width: 1700px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 
   &__title {
-    width: 474px;
+    width: 379px;
     margin-bottom: 10px;
 
     font-weight: 600;
-    font-size: 50px;
+    font-size: 40px;
     line-height: 1.3;
     color: $white;
+
+    @include desktop {
+      margin-bottom: 50px;
+      width: 474px;
+      font-size: 50px;
+    }
   }
 
   &__subtitle {
@@ -39,7 +64,12 @@
     color: $white;
   }
 
+  &__button-wrap {
+    width: 160px;
+  }
+
   &__button {
+    display: block;
     padding: 15px 30px;
     color: $white;
     font-weight: 600;

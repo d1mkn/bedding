@@ -7,14 +7,21 @@
   &:hover .single-category__item-overlay,
   &:focus .single-category__item-overlay {
     opacity: 1;
-    top: 250px;
+
+    @include tablet {
+      bottom: 30%;
+    }
+
+    @include desktop {
+      top: 250px;
+    }
   }
 }
 
 .single-category__item-overlay {
   position: absolute;
   width: 255px;
-  height: 36px;
+  height: 40px;
   margin: 0px auto;
   right: 0;
   left: 0;
@@ -37,6 +44,11 @@
 
 .single-category__item-img {
   display: block;
+
+  @include tablet {
+    width: 325px;
+    height: 300px;
+  }
 }
 
 .single-category__item-button {

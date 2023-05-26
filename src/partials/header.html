@@ -1,5 +1,10 @@
 <header>
   <div class="container header__container">
+    <button class="mobile-menu-btn" type="button">
+      <svg width="25" height="20">
+        <use href="./images/icons.svg#mobile-menu"></use>
+      </svg>
+    </button>
     <nav>
       <ul class="navigation__list">
         <li class="navigation__item js-dropdown">
@@ -31,19 +36,21 @@
                 <a href="#">Контакти</a>
               </li>
               <li class="navigation__dropdown-item"><a href="#">Про нас</a></li>
-              <li class="navigation__dropdown-item"><a href="./fabrics.html">Тканини</a></li>
+              <li class="navigation__dropdown-item">
+                <a href="./fabrics.html">Тканини</a>
+              </li>
             </ul>
           </div>
         </li>
       </ul>
-      <div class="logo-wrap">
-        <a href=".">
-          <svg class="header__logo" width="188" height="50">
-            <use href="./images/icons.svg#logo"></use>
-          </svg>
-        </a>
-      </div>
     </nav>
+    <div class="logo-wrap">
+      <a href=".">
+        <svg class="header__logo" width="188" height="50">
+          <use href="./images/icons.svg#logo"></use>
+        </svg>
+      </a>
+    </div>
 
     <div class="header__controls">
       <ul class="header__controls-list">
@@ -80,7 +87,7 @@
               <use href="./images/icons.svg#user"></use>
             </svg>
           </button>
-          <div class="navigation__dropdown-wrap visually-hidden">
+          <div class="user-menu navigation__dropdown-wrap visually-hidden">
             <ul class="navigation__dropdown">
               <li class="navigation__dropdown-item">
                 <a href="#">Вхід</a>

@@ -1,11 +1,17 @@
 .insta {
-  height: 500px;
   background-color: $pastel;
 
   .container {
     display: flex;
     justify-content: space-between;
-    padding: 45px 0px;
+
+    @include tablet {
+      padding: 19px 51px 19px 0px;
+    }
+
+    @include desktop {
+      padding: 45px 0px;
+    }
   }
 }
 
@@ -13,40 +19,88 @@
   position: relative;
   width: 100%;
   background: url('../images/feather.png');
-  background-size: 642px 571px;
-  background-repeat: no-repeat;
-  background-position-y: 30%;
+
+  @include tablet {
+    background-size: 465px 387px;
+    background-repeat: no-repeat;
+    background-position-y: 30%;
+  }
+
+  @include desktop {
+    background-size: 642px 571px;
+    background-repeat: no-repeat;
+    background-position-y: 30%;
+  }
 }
 
 .insta__text-wrap {
   position: absolute;
-  top: 102;
-  left: 183;
+
+  @include tablet {
+    top: 63px;
+    right: 49px;
+  }
+
+  @include desktop {
+    top: 102px;
+    right: 40px;
+  }
 }
 
 .insta__link-text {
-  width: 360px;
-  margin-bottom: 19px;
   font-weight: 600;
-  font-size: 32px;
   line-height: 1.3;
+
+  @include tablet {
+    width: 263px;
+    margin-bottom: 6px;
+    font-size: 24px;
+  }
+
+  @include desktop {
+    width: 360px;
+    margin-bottom: 19px;
+    font-size: 32px;
+  }
 }
 
 .insta__link {
-  font-size: 32px;
   line-height: 1.3;
+
+  @include tablet {
+    font-size: 24px;
+  }
+
+  @include desktop {
+    font-size: 32px;
+  }
 }
 
 .insta__gallery-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  width: 620px;
+
+  @include tablet {
+    width: 262px;
+  }
+
+  @include desktop {
+    width: 620px;
+  }
 }
 
 .insta__gallery-item {
-  width: 200px;
-  height: 200px;
   background-color: $light-grey;
   border-radius: 5px;
+
+  @include tablet {
+    width: 126px;
+    height: 126px;
+  }
+
+  @include desktop {
+    width: 200px;
+    height: 200px;
+  }
 }
