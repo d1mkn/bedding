@@ -79,7 +79,7 @@
 .modal__body-composition {
   margin-bottom: 10px;
 
-  line-height: calc(20px / 16px);
+  line-height: $line-height;
 }
 
 .modal__body-price {
@@ -110,7 +110,7 @@
 }
 
 .modal__body-color {
-  line-height: calc(20px / 16px);
+  line-height: $line-height;
 }
 
 .modal__body-item-color {
@@ -119,7 +119,7 @@
 
 .modal__body-size {
   margin-bottom: 10px;
-  line-height: calc(20px / 16px);
+  line-height: $line-height;
 }
 
 .modal__body-item-size {
@@ -129,7 +129,7 @@
 .modal__body-size-btn {
   padding: 7.5px 23px;
 
-  line-height: calc(20px / 16px);
+  line-height: $line-height;
 
   border: 1px solid $light-grey;
   border-radius: 5px;

@@ -9,4 +9,6 @@ export const refs = {
   modalDialog: document.querySelector('.modal__dialog'),
   modalBackdrop: document.querySelector('.modal-backdrop'),
   closeButton: document.querySelector('.modal__dialog-close'),
+  // faq
+  faqItems: document.querySelectorAll('.faq__item'),
 };

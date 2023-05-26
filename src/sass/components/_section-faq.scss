@@ -1,0 +1,7 @@
+.faq__answer {
+  display: none;
+}
+
+.faq__item.active .faq__answer {
+  display: block;
+}
