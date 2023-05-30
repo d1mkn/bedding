@@ -29,3 +29,11 @@ refs.closeButton.addEventListener('click', closeModal);
 refs.modal.addEventListener('click', e => {
   e.stopPropagation();
 });
+
+refs.addButton.addEventListener('click', () => {
+  refs.toCardWrap.classList.add('show');
+  closeModal();
+  setTimeout(() => {
+    refs.toCardWrap.classList.remove('show');
+  }, 5000);
+});
