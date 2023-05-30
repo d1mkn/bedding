@@ -3,6 +3,12 @@ export const refs = {
   dropdownItems: document.querySelectorAll('.js-dropdown'),
   searchBtn: document.querySelector('.js-search-btn'),
   searchForm: document.querySelector('.js-search-form'),
+  // backdrop
+  backdrop: document.querySelector('.backdrop'),
+  // mobile menu
+  menuBtn: document.querySelector('.mobile-menu-btn'),
+  menuContainer: document.querySelector('.mobile-menu__container'),
+  closeBtn: document.querySelector('.mobile-menu__close-btn'),
   // modal
   modalTriggerList: document.querySelectorAll('.single-category__item-link'),
   modal: document.querySelector('.modal'),

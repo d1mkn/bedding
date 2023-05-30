@@ -1,6 +1,8 @@
 .modal-open {
-  padding-right: 17px;
   overflow: hidden;
+  @include desktop {
+    padding-right: 17px;
+  }
 }
 
 .modal {
@@ -45,7 +47,7 @@
 
 .modal__content {
   position: relative;
-  width: fit-content;
+  width: max-content;
   margin: 0px auto;
   padding: 30px 30px 55px 30px;
 

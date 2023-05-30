@@ -1,4 +1,5 @@
 import { refs } from './refs/refs';
+import mobileMenu from './mobileMenu';
 
 function headerDropdown() {
   const dropdownItems = refs.dropdownItems;
