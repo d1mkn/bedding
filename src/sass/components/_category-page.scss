@@ -104,6 +104,7 @@
 
 .category-page__sort {
   display: flex;
+  align-items: center;
 
   @include tablet {
     gap: 10px;
