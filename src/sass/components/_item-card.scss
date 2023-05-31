@@ -49,6 +49,11 @@
     width: 325px;
     height: 300px;
   }
+
+  @include desktop {
+    width: 295px;
+    height: 310px;
+  }
 }
 
 .single-category__item-button {

@@ -17,9 +17,11 @@ export const refs = {
   closeButton: document.querySelector('.modal__dialog-close'),
   addButton: document.querySelector('.modal__body-actions-add'),
   toCardWrap: document.querySelector('.to-card__wrap'),
-
   // faq
   faqItems: document.querySelectorAll('.faq__item'),
   // fabrics
   fabricsItems: document.querySelectorAll('.fabrics__item'),
+  // category
+  categoryItems: document.querySelectorAll('.category-page__filter-item'),
+  categoryDrop: document.querySelectorAll('.category-page__filter-drop'),
 };
