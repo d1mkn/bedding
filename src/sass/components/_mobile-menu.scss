@@ -12,6 +12,10 @@
   transition: transform 0.4s ease;
 }
 
+.mobile-menu__content-wrap {
+  height: 85%;
+}
+
 .mobile-menu__content {
   display: flex;
   align-items: center;

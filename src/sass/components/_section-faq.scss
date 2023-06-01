@@ -12,8 +12,16 @@
 
 .faq__items-wrap {
   display: flex;
+  width: 100%;
   flex-direction: column;
-  gap: 20px;
+
+  @include tablet {
+    gap: 10px;
+  }
+
+  @include desktop {
+    gap: 20px;
+  }
 }
 
 .faq__item {

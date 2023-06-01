@@ -15,7 +15,7 @@ export const refs = {
   modalDialog: document.querySelector('.modal__dialog'),
   modalBackdrop: document.querySelector('.modal-backdrop'),
   closeButton: document.querySelector('.modal__dialog-close'),
-  addButton: document.querySelector('.modal__body-actions-add'),
+  addButton: document.querySelector('.js-add-to-cart'),
   toCardWrap: document.querySelector('.to-card__wrap'),
   // faq
   faqItems: document.querySelectorAll('.faq__item'),
