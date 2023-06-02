@@ -1,0 +1,134 @@
+.cart-title__wrap {
+  text-align: center;
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  @include desktop {
+    margin-bottom: 40px;
+  }
+}
+
+.cart-title {
+  font-weight: 500;
+
+  @include tablet {
+    margin-bottom: 5px;
+    font-size: 24px;
+    line-height: calc(29px / 24px);
+  }
+
+  @include desktop {
+    margin-bottom: 20px;
+    font-size: 32px;
+    line-height: calc(39px / 32px);
+  }
+}
+
+.cart-title__link {
+  text-decoration: underline;
+
+  @include tablet {
+    line-height: 1.3;
+  }
+
+  @include desktop {
+    font-size: 20px;
+  }
+}
+
+.cart__content {
+  @include tablet {
+    margin-bottom: 40px;
+  }
+
+  @include desktop {
+    display: flex;
+    margin-bottom: 90px;
+    gap: 20px;
+  }
+}
+
+.cart__content-left {
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  @include desktop {
+    width: 820px;
+  }
+}
+
+.cart__content-right {
+  @include tablet {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @include desktop {
+    display: block;
+    width: 400px;
+  }
+}
+
+.cart__total-wrap {
+  @include tablet {
+    width: 325px;
+  }
+
+  @include desktop {
+    width: unset;
+    padding: 20px;
+    background-color: $pastel;
+  }
+}
+
+.cart__total {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  @include desktop {
+    gap: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid $light-grey;
+  }
+}
+
+.cart__total-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  line-height: 1.3;
+
+  span {
+    font-weight: 600;
+  }
+}
+
+.cart__total-buy-wrap {
+  margin: 0px auto;
+}
+
+.cart__total-buy-link {
+  display: block;
+  padding: 9.5px 0px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.3;
+  color: $white;
+  text-align: center;
+  background-color: $main-blue;
+  border: 1px solid $light-grey;
+  border-radius: 5px;
+}
+
+.cart__total-buy-link:hover,
+.cart__total-buy-link:focus {
+  background-color: $dark-blue;
+}
