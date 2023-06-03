@@ -3,3 +3,8 @@ body {
   line-height: $line-height;
   background-color: $light-pastel;
 }
+
+option {
+  border: 1px solid $light-grey;
+  border-radius: 5px;
+}
