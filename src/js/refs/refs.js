@@ -24,4 +24,9 @@ export const refs = {
   // category
   categoryItems: document.querySelectorAll('.category-page__filter-item'),
   categoryDrop: document.querySelectorAll('.category-page__filter-drop'),
+  // ordering
+  orderingCheckbox1: document.querySelector('.js-checkbox1'),
+  orderingCheckbox2: document.querySelector('.js-checkbox2'),
+  orderingSummary: document.querySelector('.ordering-details-js'),
+  orderingDetails: document.querySelector('.ordering-items-js'),
 };

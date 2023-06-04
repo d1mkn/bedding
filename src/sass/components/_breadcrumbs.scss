@@ -17,4 +17,9 @@
     font-weight: 600;
     line-height: $line-height;
   }
+
+  @include tablet {
+    margin-top: 21.5px;
+    margin-bottom: 11.5px;
+  }
 }

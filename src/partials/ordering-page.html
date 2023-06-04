@@ -2,7 +2,7 @@
   <div class="ordering-title__wrap">
     <h1 class="ordering-title">Оформити замовлення</h1>
   </div>
-  <div class="ordering__contant">
+  <div class="ordering__content">
     <div class="ordering__content-left">
       <div class="ordering__form-wrap">
         <form class="ordering__form">
@@ -90,72 +90,89 @@
 
           <p class="ordering__form-title">Спосіб доставки</p>
 
-          <div>
-            <input type="checkbox" id="post-office" name="post-office" />
-            <label for="post-office">Відділення Нової Пошти</label>
+          <div class="ordering__form-checkbox-wrap">
+            <input
+              class="ordering__form-checkbox js-checkbox1"
+              type="checkbox"
+              id="post-office"
+              name="post-office"
+            />
+            <label for="post-office"> Відділення Нової Пошти</label>
           </div>
 
-          <div class="ordering__form-select-wrap w100">
-            <select
-              class="ordering__form-select w100"
-              id="post-office-address"
-              name="post-office-address"
-            >
-              <option value="">Адреса відділення</option>
-            </select>
+          <div class="visually-hidden js-ordering-data1">
+            <div class="ordering__form-inputs-group">
+              <div class="ordering__form-select-wrap w100">
+                <select
+                  class="ordering__form-select w98"
+                  id="post-office-address"
+                  name="post-office-address"
+                >
+                  <option value="">Адреса відділення</option>
+                </select>
+              </div>
+            </div>
           </div>
 
-          <div>
-            <input type="checkbox" id="courier" name="courier" />
+          <div class="ordering__form-checkbox-wrap">
+            <input
+              class="ordering__form-checkbox js-checkbox2"
+              type="checkbox"
+              id="courier"
+              name="courier"
+            />
             <label for="courier">Кур'єр Нової Пошти</label>
           </div>
 
-          <div class="ordering__form-inputs-group">
-            <div class="ordering__form-input-wrap w100">
-              <input
-                class="ordering__form-input w100"
-                type="text"
-                id="street"
-                name="street"
-                placeholder="&#32;"
-              />
-              <label class="ordering__form-label" for="email"
-                >Назва вулиці</label
-              >
-            </div>
-          </div>
-
-          <div class="ordering__form-inputs-group">
-            <div class="ordering__form-input-wrap">
-              <input
-                class="ordering__form-input"
-                type="text"
-                id="house-number"
-                name="house-number"
-                placeholder="&#32;"
-              />
-              <label class="ordering__form-label" for="email"
-                >Номер будинку</label
-              >
+          <div class="visually-hidden js-ordering-data2">
+            <div class="ordering__form-inputs-group">
+              <div class="ordering__form-input-wrap w100">
+                <input
+                  class="ordering__form-input w100"
+                  type="text"
+                  id="street"
+                  name="street"
+                  placeholder="&#32;"
+                />
+                <label class="ordering__form-label" for="email"
+                  >Назва вулиці</label
+                >
+              </div>
             </div>
 
-            <div class="ordering__form-input-wrap">
-              <input
-                class="ordering__form-input"
-                type="text"
-                id="apartment-number"
-                name="apartment-number"
-                placeholder="&#32;"
-              />
-              <label class="ordering__form-label" for="email"
-                >Номер квартири</label
-              >
+            <div class="ordering__form-inputs-group">
+              <div class="ordering__form-input-wrap">
+                <input
+                  class="ordering__form-input"
+                  type="text"
+                  id="house-number"
+                  name="house-number"
+                  placeholder="&#32;"
+                />
+                <label class="ordering__form-label" for="email"
+                  >Номер будинку</label
+                >
+              </div>
+
+              <div class="ordering__form-input-wrap">
+                <input
+                  class="ordering__form-input"
+                  type="text"
+                  id="apartment-number"
+                  name="apartment-number"
+                  placeholder="&#32;"
+                />
+                <label class="ordering__form-label" for="email"
+                  >Номер квартири</label
+                >
+              </div>
             </div>
           </div>
 
           <p class="ordering__form-title">Спосіб оплати</p>
-          <div>
+          <div class="ordering__form-checkbox-wrap">
             <input
+              class="ordering__form-checkbox"
               type="checkbox"
               id="pay-on-delivery"
               name="pay-on-delivery"
@@ -163,8 +180,13 @@
             <label for="pay-on-delivery">Оплата при отриманні замовлення</label>
           </div>
 
-          <div>
-            <input type="checkbox" id="online-payment" name="online-payment" />
+          <div class="ordering__form-checkbox-wrap">
+            <input
+              class="ordering__form-checkbox"
+              type="checkbox"
+              id="online-payment"
+              name="online-payment"
+            />
             <label for="online-payment"
               >Оплата картою онлайн (через LiqPay)</label
             >
@@ -177,10 +199,44 @@
             name="comment"
           ></textarea>
 
-          <button type="submit">Купити</button>
+          <div class="ordering__form-submit-wrap">
+            <button class="ordering__form-submit button" type="submit">
+              Купити
+            </button>
+          </div>
         </form>
       </div>
     </div>
-    <div class="ordering__content-right"></div>
+    <div class="ordering__content-right">
+      <div class="ordering-details-js">
+        <div class="ordering__details">
+          <p class="ordering__details-text">
+            <svg class="ordering__details-icon" width="24" height="24">
+              <use href="./images/icons.svg#cart"></use></svg
+            >Показати деталі замовлення<span
+              ><svg class="ordering__details-icon" width="13" height="8">
+                <use href="./images/icons.svg#faq-arrow"></use></svg
+            ></span>
+          </p>
+
+          <p class="ordering__details-text">*** грн</p>
+        </div>
+        <div class="ordering-items-js">
+          <div class="ordering__items-wrap">
+            <include src="./partials/ordering-item.html"></include>
+            <include src="./partials/ordering-item.html"></include>
+            <include src="./partials/ordering-item.html"></include>
+          </div>
+          <div class="ordering__total-wrap">
+            <p class="ordering__total-price">
+              Кількість товарів: <span class="ordering-title-span">**</span>
+            </p>
+            <p class="ordering__total-price">
+              Загальна сума: <span class="ordering-title-span">*** грн</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
