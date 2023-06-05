@@ -215,10 +215,12 @@
   @include tablet {
     padding: 20px 65px;
     margin-bottom: 20px;
+    cursor: pointer;
   }
 
   @include desktop {
     padding: 50px 85px;
+    cursor: auto;
   }
 }
 
@@ -281,7 +283,6 @@
 .ordering__details {
   display: flex;
   justify-content: space-between;
-  cursor: pointer;
 
   @include desktop {
     display: none;

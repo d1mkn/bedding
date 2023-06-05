@@ -22,4 +22,9 @@
     margin-top: 21.5px;
     margin-bottom: 11.5px;
   }
+
+  @include desktop {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }

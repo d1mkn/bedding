@@ -1,0 +1,263 @@
+.cabinet-section {
+  display: none;
+}
+
+.cabinet-section-active {
+  display: block;
+}
+
+.cabinet-title__wrap {
+  text-align: center;
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  @include desktop {
+    margin-bottom: 40px;
+    border-bottom: 1px solid $light-grey;
+  }
+}
+
+.cabinet-title {
+  @include tablet {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: calc(29px / 24px);
+  }
+
+  @include desktop {
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: calc(39px / 32px);
+  }
+}
+
+.cabinet-navigation__wrap {
+  display: flex;
+
+  @include tablet {
+    min-height: 281px;
+    justify-content: space-between;
+  }
+
+  @include desktop {
+    min-height: auto;
+    gap: 35px;
+    justify-content: unset;
+  }
+}
+
+.cabinet-content {
+  display: flex;
+
+  @include tablet {
+    margin-bottom: 40px;
+    flex-direction: column-reverse;
+    gap: 23px;
+  }
+
+  @include desktop {
+    min-height: 355px;
+    margin-bottom: 90px;
+    gap: 45px;
+    flex-direction: row;
+  }
+}
+
+.cabinet-navigation__list {
+  height: fit-content;
+  border: 1px solid $light-grey;
+  border-radius: 5px;
+
+  @include tablet {
+    width: 210px;
+  }
+
+  @include desktop {
+    width: 315px;
+  }
+}
+
+.cabinet-navigation__item {
+  background-color: $white;
+  border-bottom: 1px solid $light-grey;
+}
+
+.cabinet-navigation__item:first-child {
+  border-radius: 5px 5px 0px 0px;
+}
+
+.cabinet-navigation__item:last-child {
+  border-bottom: none;
+  border-radius: 0px 5px 5px;
+}
+
+.cabinet-navigation__item:last-child .cabinet-navigation__button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cabinet-navigation__item:last-child .cabinet-navigation__button svg {
+  transform: rotate(90deg);
+}
+
+.cabinet-navigation__button {
+  width: 100%;
+  text-align: left;
+
+  @include tablet {
+    padding: 12px 25px;
+  }
+
+  @include desktop {
+    padding: 17px 25px;
+  }
+}
+
+.cabinet-navigation__button:hover,
+.cabinet-navigation__button:focus {
+  background-color: $main-blue;
+}
+
+.cabinet-navigation__button.active {
+  background-color: $blue;
+}
+
+.cabinet-content__block {
+  @include tablet {
+    width: 436px;
+  }
+
+  @include desktop {
+    width: 550px;
+  }
+}
+
+.personal-data__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.personal-data__label {
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+
+.personal-data__input {
+  border: 1px solid $light-grey;
+  border-radius: 5px;
+
+  @include tablet {
+    padding: 12px 25px;
+    margin-bottom: 10px;
+  }
+
+  @include desktop {
+    padding: 17px 25px;
+    margin-bottom: 15px;
+  }
+}
+
+.personal-data__input:last-child {
+  @include tablet {
+    margin-bottom: 12px;
+  }
+
+  @include desktop {
+    margin-bottom: 30px;
+  }
+}
+
+.personal-data__btn-wrap {
+  text-align: right;
+}
+
+.personal-data__btn {
+  color: $white;
+  font-weight: 600;
+  line-height: 1.3;
+  background-color: $main-blue;
+  border: 1px solid $light-grey;
+  border-radius: 5px;
+
+  @include tablet {
+    padding: 8px 20px;
+  }
+
+  @include desktop {
+    padding: 9.5px 30px;
+    font-size: 24px;
+  }
+}
+
+.cabinet-contacts {
+  height: fit-content;
+  background-color: $blue;
+  border: 1px solid $light-grey;
+  border-radius: 5px;
+
+  @include tablet {
+    padding: 10px 0px;
+    text-align: center;
+  }
+
+  @include desktop {
+    width: 295px;
+    padding: 20px 0px;
+  }
+}
+
+.cabinet-contacts__text {
+  font-weight: 600;
+  line-height: 1.3;
+
+  @include tablet {
+    margin-bottom: 8px;
+  }
+
+  @include desktop {
+    margin-bottom: 20px;
+  }
+}
+
+.cabinet-contacts__phone {
+  position: relative;
+  text-align: center;
+}
+
+.cabinet-contacts__icon {
+  position: absolute;
+  height: 15px;
+  fill: $black;
+
+  @include tablet {
+    left: 172px;
+  }
+
+  @include desktop {
+    left: 58px;
+  }
+}
+
+.cabinet-contacts__list {
+  display: flex;
+
+  @include tablet {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  @include desktop {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.cabinet-contacts__link {
+  font-weight: 600;
+  line-height: 1.3;
+}

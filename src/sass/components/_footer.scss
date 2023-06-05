@@ -15,7 +15,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
 
-    @include tablet{
+    @include tablet {
       padding: 20px 52px;
     }
 
@@ -121,6 +121,7 @@ footer {
 .footer__contacts-icon {
   width: fit-content;
   height: 15px;
+  fill: $blue;
 }
 
 .footer__copyright {

@@ -207,34 +207,32 @@
         </form>
       </div>
     </div>
-    <div class="ordering__content-right">
-      <div class="ordering-details-js">
-        <div class="ordering__details">
-          <p class="ordering__details-text">
-            <svg class="ordering__details-icon" width="24" height="24">
-              <use href="./images/icons.svg#cart"></use></svg
-            >Показати деталі замовлення<span
-              ><svg class="ordering__details-icon" width="13" height="8">
-                <use href="./images/icons.svg#faq-arrow"></use></svg
-            ></span>
-          </p>
+    <div class="ordering__content-right ordering-details-js">
+      <div class="ordering__details">
+        <p class="ordering__details-text">
+          <svg class="ordering__details-icon" width="24" height="24">
+            <use href="./images/icons.svg#cart"></use></svg
+          >Показати деталі замовлення<span
+            ><svg class="ordering__details-icon" width="13" height="8">
+              <use href="./images/icons.svg#faq-arrow"></use></svg
+          ></span>
+        </p>
 
-          <p class="ordering__details-text">*** грн</p>
+        <p class="ordering__details-text">*** грн</p>
+      </div>
+      <div class="ordering-items-js">
+        <div class="ordering__items-wrap">
+          <include src="./partials/ordering-item.html"></include>
+          <include src="./partials/ordering-item.html"></include>
+          <include src="./partials/ordering-item.html"></include>
         </div>
-        <div class="ordering-items-js">
-          <div class="ordering__items-wrap">
-            <include src="./partials/ordering-item.html"></include>
-            <include src="./partials/ordering-item.html"></include>
-            <include src="./partials/ordering-item.html"></include>
-          </div>
-          <div class="ordering__total-wrap">
-            <p class="ordering__total-price">
-              Кількість товарів: <span class="ordering-title-span">**</span>
-            </p>
-            <p class="ordering__total-price">
-              Загальна сума: <span class="ordering-title-span">*** грн</span>
-            </p>
-          </div>
+        <div class="ordering__total-wrap">
+          <p class="ordering__total-price">
+            Кількість товарів: <span class="ordering-title-span">**</span>
+          </p>
+          <p class="ordering__total-price">
+            Загальна сума: <span class="ordering-title-span">*** грн</span>
+          </p>
         </div>
       </div>
     </div>
