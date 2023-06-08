@@ -3,7 +3,8 @@ import Swiper, { Navigation } from 'swiper';
 Swiper.use([Navigation]);
 
 const swiper = new Swiper('.swiper-container', {
-  loop: true,
+  loop: false,
+
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -13,7 +14,6 @@ const swiper = new Swiper('.swiper-container', {
     768: {
       slidesPerView: 'auto',
       slidesPerGroup: 1,
-      slidesOffsetAfter: 51,
     },
     1240: {
       slidesPerView: 'auto',
