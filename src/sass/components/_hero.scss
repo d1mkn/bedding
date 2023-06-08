@@ -36,21 +36,20 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 25px;
+}
 
-  &__title {
-    width: 379px;
-    margin-bottom: 10px;
+.hero__title {
+  width: 379px;
+  margin-bottom: 10px;
 
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 1.3;
-    color: $white;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.3;
+  color: $white;
 
-    @include desktop {
-      margin-bottom: 50px;
-      width: 474px;
-      font-size: 50px;
-    }
+  @include desktop {
+    width: 474px;
+    font-size: 50px;
   }
 }
 
