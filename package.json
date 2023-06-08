@@ -23,6 +23,7 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "dependencies": {
     "animate.css": "^4.1.1",
-    "modern-normalize": "^1.1.0"
+    "modern-normalize": "^1.1.0",
+    "swiper": "^9.3.2"
   }
 }
