@@ -1,4 +1,4 @@
-<div class="modal-backdrop">
+<div class="modal-backdrop visually-hidden animate__animated animate__faster">
   <div class="modal">
     <div class="modal__dialog">
       <div class="modal__content">
@@ -49,20 +49,12 @@
               <p class="modal__body-color">
                 Колір: <span class="modal__body-item-color">###</span>
               </p>
-              <form class="modal__body-color-picker">
-                <label class="modal__body-color" for="color1">
-                  <input type="radio" name="color" value="color1"
-                /></label>
-                <label class="modal__body-color" for="color2">
-                  <input type="radio" name="color" value="color2"
-                /></label>
-                <label class="modal__body-color" for="color3">
-                  <input type="radio" name="color" value="color3"
-                /></label>
-                <label class="modal__body-color" for="color4">
-                  <input type="radio" name="color" value="color4"
-                /></label>
-              </form>
+              <div class="modal__body-color-picker">
+                <a class="modal__body-color-item" href="#"></a>
+                <a class="modal__body-color-item active" href="#"></a>
+                <a class="modal__body-color-item" href="#"></a>
+                <a class="modal__body-color-item" href="#"></a>
+              </div>
             </div>
             <div class="modal__body-size-wrap">
               <div>
@@ -80,15 +72,19 @@
                     Полуторний
                   </button>
                 </div>
+                <button class="modal__body-size-info">Розмірна сітка</button>
                 <div class="modal__body-size-info-wrap">
-                  <svg
-                    class="modal__body-size-info-icon"
-                    width="22"
-                    height="13"
-                  >
-                    <use href="./images/icons.svg#ruler"></use>
-                  </svg>
-                  <a class="modal__body-size-info" href="#">Розмірна сітка</a>
+                  <p class="modal__body-size-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Neque, facere magni sed eius repudiandae ipsa quasi nemo
+                    pariatur hic harum aperiam laboriosam voluptas rem beatae
+                    doloremque perferendis necessitatibus itaque aliquid. Lorem,
+                    ipsum dolor sit amet consectetur adipisicing elit. Officia
+                    voluptatum quam ipsa, dolor soluta suscipit dolorum eligendi
+                    repudiandae voluptate voluptatem ipsum perferendis quibusdam
+                    error quisquam! Optio asperiores possimus voluptas
+                    consequuntur.
+                  </p>
                 </div>
               </div>
             </div>

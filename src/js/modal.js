@@ -1,15 +1,21 @@
 import { refs } from './refs/refs';
 
 function openModal() {
-  refs.modal.style.display = 'block';
-  refs.modalBackdrop.style.display = 'block';
+  refs.modal.classList.remove('visually-hidden');
+  refs.modalBackdrop.classList.remove('visually-hidden');
+  refs.modalBackdrop.classList.add('animate__fadeIn');
   document.body.classList.add('modal-open');
 }
 
 function closeModal() {
-  refs.modal.style.display = 'none';
-  refs.modalBackdrop.style.display = 'none';
-  document.body.classList.remove('modal-open');
+  refs.modalBackdrop.classList.remove('animate__fadeIn');
+  refs.modalBackdrop.classList.add('animate__fadeOut');
+  setTimeout(() => {
+    refs.modalBackdrop.classList.add('visually-hidden');
+    refs.modal.classList.add('visually-hidden');
+    refs.modalBackdrop.classList.remove('animate__fadeOut');
+    document.body.classList.remove('modal-open');
+  }, 500);
 }
 
 refs.modalTriggerList.forEach(item =>
@@ -35,5 +41,5 @@ refs.addButton.addEventListener('click', () => {
   closeModal();
   setTimeout(() => {
     refs.toCardWrap.classList.remove('show');
-  }, 5000);
+  }, 5500);
 });

@@ -1,31 +1,25 @@
 <li class="single-category__item">
   <div class="single-category__item-link">
-    <div class="single-category__item-overlay">
+    <div class="single-category__item-overlay js-quick-view">
       <p class="single-category__item-overlay-text">Швидкий перегляд</p>
     </div>
     <div class="single-category__item-about">
-      <img
-        class="single-category__item-img"
-        src="./images/item-sample.png"
-        alt="item sample"
-      />
+      <a href="./item.html">
+        <img
+          class="single-category__item-img"
+          src="./images/item-sample.png"
+          alt="item sample"
+        />
+      </a>
       <h4 class="single-category__item-title">Ковдра Soft Grid</h4>
       <p class="single-category__item-desc">Зроблена з преміальної бавовни</p>
       <span class="single-category__item-price">Від 1600 грн</span>
     </div>
   </div>
-  <form class="item-color-picker">
-    <label class="single-category__item-color" for="color1">
-      <input type="radio" name="color" value="color1"
-    /></label>
-    <label class="single-category__item-color" for="color2">
-      <input type="radio" name="color" value="color2"
-    /></label>
-    <label class="single-category__item-color" for="color3">
-      <input type="radio" name="color" value="color3"
-    /></label>
-    <label class="single-category__item-color" for="color4">
-      <input type="radio" name="color" value="color4"
-    /></label>
-  </form>
+  <div class="modal__body-color-picker">
+    <a class="modal__body-color-item" href="#"></a>
+    <a class="modal__body-color-item active" href="#"></a>
+    <a class="modal__body-color-item" href="#"></a>
+    <a class="modal__body-color-item" href="#"></a>
+  </div>
 </li>

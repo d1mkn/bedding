@@ -10,7 +10,7 @@ export const refs = {
   menuContainer: document.querySelector('.mobile-menu__container'),
   closeBtn: document.querySelector('.mobile-menu__close-btn'),
   // modal
-  modalTriggerList: document.querySelectorAll('.single-category__item-link'),
+  modalTriggerList: document.querySelectorAll('.js-quick-view'),
   modal: document.querySelector('.modal'),
   modalDialog: document.querySelector('.modal__dialog'),
   modalBackdrop: document.querySelector('.modal-backdrop'),

@@ -91,11 +91,11 @@ header {
   display: flex;
   align-items: center;
   height: 70px;
+}
 
-  &:hover .header__controls-item-icon,
-  & button:focus .header__controls-item-icon {
-    fill: $dark-blue;
-  }
+.js-search-btn:hover .header__controls-item-icon,
+.js-search-btn:active .header__controls-item-icon {
+  fill: $dark-blue;
 }
 
 .navigation__dropdown-wrap {
@@ -169,7 +169,8 @@ header {
 .search__submit-btn {
   margin: 0px 20px 0px 25px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     fill: $dark-blue;
   }
 }
