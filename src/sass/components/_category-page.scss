@@ -170,10 +170,10 @@
   flex-wrap: wrap;
 
   @include tablet {
-    gap: 14px;
+    gap: 30px 14px;
   }
 
   @include desktop {
-    gap: 20px;
+    gap: 90px 20px;
   }
 }
