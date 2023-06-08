@@ -1,9 +1,24 @@
+.category__item-img-wrap {
+  border: 1px solid $light-grey;
+  border-bottom-width: 0px;
+  border-radius: 5px 5px 0px 0px;
+  background-color: $white;
+
+  @include tablet {
+    width: 155px;
+    height: 145px;
+  }
+
+  @include desktop {
+    width: 293px;
+    height: 288px;
+  }
+}
+
 .category__item-img {
   display: block;
   width: 100%;
   object-fit: fill;
-  border: 1px solid $light-grey;
-  border-radius: 5px 5px 0px 0px;
 }
 
 .category__item-link {

@@ -83,6 +83,9 @@
 
 .single-category__item-img {
   display: block;
+  background-color: $white;
+  border: 1px solid $light-grey;
+  border-radius: 5px;
 
   @include tablet {
     width: 325px;
