@@ -29,4 +29,7 @@ export const refs = {
   orderingCheckbox2: document.querySelector('.js-checkbox2'),
   orderingSummary: document.querySelector('.ordering-details-js'),
   orderingDetails: document.querySelector('.ordering-items-js'),
+  // item
+  formShowBtn: document.querySelector('.js-form-open-btn'),
+  reviewForm: document.querySelector('.js-review-form'),
 };
