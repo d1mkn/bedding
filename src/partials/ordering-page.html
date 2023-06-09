@@ -15,9 +15,13 @@
                 id="first-name"
                 name="first-name"
                 placeholder="&#32;"
+                pattern="^[A-ZА-ЯЄІЇҐ][a-zA-Zа-яА-Яєіїґ]{1,}$"
                 required
               />
               <label class="ordering__form-label" for="first-name">Ім'я</label>
+              <p class="invalid-input-message">
+                Ім'я має починатися з великої літери
+              </p>
             </div>
 
             <div class="ordering__form-input-wrap">
@@ -27,11 +31,15 @@
                 id="last-name"
                 name="last-name"
                 placeholder="&#32;"
+                pattern="^[A-ZА-ЯЄІЇҐ][a-zA-Zа-яА-Яєіїґ]{1,}$"
                 required
               />
               <label class="ordering__form-label" for="last-name"
                 >Прізвище</label
               >
+              <p class="invalid-input-message">
+                Прізвище має починатися з великої літери
+              </p>
             </div>
 
             <div class="ordering__form-input-wrap">
@@ -41,9 +49,11 @@
                 id="phone"
                 name="phone"
                 placeholder="&#32;"
+                pattern="^(\+38)?[0][0-9]{9}$"
                 required
               />
               <label class="ordering__form-label" for="phone">Телефон</label>
+              <p class="invalid-input-message">Формат +380ХХХХХХХХХ</p>
             </div>
 
             <div class="ordering__form-input-wrap">
@@ -53,11 +63,15 @@
                 id="email"
                 name="email"
                 placeholder="&#32;"
+                pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
                 required
               />
               <label class="ordering__form-label" for="email"
                 >Електронна адреса</label
               >
+              <p class="invalid-input-message">
+                Перевірте правильність вказаної електронної адреси
+              </p>
             </div>
           </div>
 
@@ -178,6 +192,16 @@
               name="pay-on-delivery"
             />
             <label for="pay-on-delivery">Оплата при отриманні замовлення</label>
+            <div class="pay-on-delivery-info">
+              <p class="pay-on-delivery-info-text">
+                Готівкою кур`єру або на відділенні Нової Пошти (враховуйте
+                комісію за накладений платіж).
+              </p>
+              <p class="pay-on-delivery-info-text">
+                Карткою Visa/MasterCard за допомогою термінала у кур`єра або на
+                відділенні Нової Пошти.
+              </p>
+            </div>
           </div>
 
           <div class="ordering__form-checkbox-wrap">
@@ -200,9 +224,7 @@
           ></textarea>
 
           <div class="ordering__form-submit-wrap">
-            <button class="ordering__form-submit button" type="submit">
-              Купити
-            </button>
+            <button class="ordering__form-submit" type="submit">Купити</button>
           </div>
         </form>
       </div>

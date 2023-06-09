@@ -1,5 +1,7 @@
 import { refs } from './refs/refs';
 
+// animations
+
 const checkbox1 = refs.orderingCheckbox1;
 const checkbox2 = refs.orderingCheckbox2;
 const orderingMethod1 = document.querySelector('.js-ordering-data1');
