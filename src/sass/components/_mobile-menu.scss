@@ -47,6 +47,7 @@
 
 .mobile-menu__item {
   font-size: 20px;
+  transition: color $transition;
 }
 
 .mobile-menu__item:hover,

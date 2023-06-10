@@ -38,6 +38,8 @@
   border: 1px solid $light-grey;
   border-radius: 0px 0px 5px 5px;
 
+  transition: background-color $transition;
+
   @include tablet {
     font-size: 15px;
     line-height: calc(18px / 15px);

@@ -7,9 +7,9 @@
     </button>
     <nav>
       <ul class="navigation__list">
-        <li class="navigation__item js-dropdown">
+        <li class="navigation__item">
           <button class="navigation__item-button">Каталог</button>
-          <div class="navigation__dropdown-wrap visually-hidden">
+          <div class="navigation__dropdown-wrap">
             <ul class="navigation__dropdown">
               <li class="navigation__dropdown-item">
                 <a href="#">Постільна білизна</a>
@@ -25,9 +25,9 @@
             </ul>
           </div>
         </li>
-        <li class="navigation__item js-dropdown">
+        <li class="navigation__item">
           <button class="navigation__item-button">Інформація</button>
-          <div class="navigation__dropdown-wrap visually-hidden">
+          <div class="navigation__dropdown-wrap">
             <ul class="navigation__dropdown">
               <li class="navigation__dropdown-item">
                 <a href="./faq.html">Популярні питання</a>
@@ -60,7 +60,9 @@
               <use href="./images/icons.svg#search"></use>
             </svg>
           </button>
-          <form class="search__form js-search-form">
+          <form
+            class="search__form js-search-form animate__animated animate__faster visually-hidden"
+          >
             <button class="search__submit-btn" type="submit">
               <svg width="24" height="24">
                 <use href="./images/icons.svg#search"></use>
@@ -81,13 +83,13 @@
             </svg>
           </a>
         </li>
-        <li class="header__controls-item js-dropdown">
+        <li class="header__controls-item">
           <button>
             <svg class="header__controls-item-icon" width="24" height="24">
               <use href="./images/icons.svg#user"></use>
             </svg>
           </button>
-          <div class="user-menu navigation__dropdown-wrap visually-hidden">
+          <div class="user-menu navigation__dropdown-wrap">
             <ul class="navigation__dropdown">
               <li class="navigation__dropdown-item">
                 <a href="#">Вхід</a>
