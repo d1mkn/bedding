@@ -1,5 +1,7 @@
 import { refs } from './refs/refs';
 
+let isToCartOpened = false;
+
 function openModal() {
   refs.modal.classList.remove('visually-hidden');
   refs.modalBackdrop.classList.remove('visually-hidden');
@@ -16,6 +18,16 @@ function closeModal() {
     refs.modalBackdrop.classList.remove('animate__fadeOut');
     document.body.classList.remove('modal-open');
   }, 500);
+}
+
+function closeToCartModal() {
+  refs.toCardWrap.classList.toggle('animate__fadeInRight');
+  refs.toCardWrap.classList.toggle('animate__fadeOutRight');
+
+  setTimeout(() => {
+    refs.toCardWrap.classList.toggle('visually-hidden');
+    refs.toCardWrap.classList.toggle('animate__fadeOutRight');
+  }, 1000);
 }
 
 refs.modalTriggerList.forEach(item =>
@@ -37,9 +49,25 @@ refs.modal.addEventListener('click', e => {
 });
 
 refs.addButton.addEventListener('click', () => {
-  refs.toCardWrap.classList.add('show');
   closeModal();
+  isToCartOpened = true;
+  refs.toCardWrap.classList.toggle('animate__fadeInRight');
+  refs.toCardWrap.classList.toggle('visually-hidden');
+
   setTimeout(() => {
-    refs.toCardWrap.classList.remove('show');
-  }, 5500);
+    if (isToCartOpened) {
+      closeToCartModal();
+    }
+  }, 5000);
+});
+
+refs.toCardClsBtn.addEventListener('click', () => {
+  isToCartOpened = false;
+  refs.toCardWrap.classList.toggle('animate__fadeInRight');
+  refs.toCardWrap.classList.toggle('animate__fadeOutRight');
+
+  setTimeout(() => {
+    refs.toCardWrap.classList.toggle('visually-hidden');
+    refs.toCardWrap.classList.toggle('animate__fadeOutRight');
+  }, 1000);
 });

@@ -16,7 +16,8 @@ export const refs = {
   modalBackdrop: document.querySelector('.modal-backdrop'),
   closeButton: document.querySelector('.modal__dialog-close'),
   addButton: document.querySelector('.js-add-to-cart'),
-  toCardWrap: document.querySelector('.to-card__wrap'),
+  toCardWrap: document.querySelector('.js-to-cart-modal'),
+  toCardClsBtn: document.querySelector('.js-to-cart-close-btn'),
   // faq
   faqItems: document.querySelectorAll('.faq__item'),
   // fabrics
