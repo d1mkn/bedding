@@ -1,0 +1,30 @@
+.single-category__sale-item-link::before {
+  content: 'Акція';
+  position: absolute;
+  left: -5.76%;
+  top: 1.92%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 72px;
+  height: 47px;
+  padding: 0px 13px;
+
+  color: $white;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 130%;
+  background-color: $blue;
+  border-radius: 100px;
+  transform: translateY(-50%) rotate(-25deg);
+}
+
+.old-price .item-price {
+  margin-right: 10px;
+  text-decoration: line-through;
+}
+
+.item-new-price {
+  color: $red;
+}
