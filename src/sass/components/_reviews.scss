@@ -55,6 +55,8 @@
 }
 
 .reviews__list {
+  background-color: $pastel;
+
   @include tablet {
     margin-bottom: 30px;
   }
@@ -203,7 +205,8 @@
 }
 
 .reviews__form {
-  transition: height 1s, margin 1s;
+  opacity: 1;
+  transition: opacity 0.5s, height 0.5s, margin 0.5s;
 
   @include tablet {
     margin-bottom: 30px;
@@ -212,6 +215,10 @@
   @include desktop {
     margin-bottom: 50px;
   }
+}
+
+.o0 {
+  opacity: 0;
 }
 
 .reviews__form-inputs-wrap {
