@@ -14,12 +14,10 @@ const swiper = new Swiper('.swiper-container', {
     768: {
       slidesPerView: 'auto',
       slidesPerGroup: 1,
-      allowTouchMove: true,
     },
     1240: {
       slidesPerView: 'auto',
       slidesPerGroup: 1,
-      allowTouchMove: false,
     },
   },
 
