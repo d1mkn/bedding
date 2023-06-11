@@ -43,7 +43,7 @@
   position: absolute;
   display: flex;
   flex-direction: row-reverse;
-  gap: 30px;
+  gap: 20px;
   right: 0;
   bottom: 0;
 }
@@ -61,7 +61,30 @@
 
 .swiper-button-next,
 .swiper-button-prev {
+  width: 35px;
   cursor: pointer;
+  transition: opacity $transition;
+}
+
+.swiper-button-next {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.swiper-button-prev {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.single-category__navigation-icon-next,
+.single-category__navigation-icon-prev {
+  width: 30px;
+  height: 30px;
+  transition: width $transition;
+}
+
+.icow35 {
+  width: 35px;
 }
 
 .swiper-slide {
