@@ -60,33 +60,39 @@ const swiper = new Swiper('.swiper-container', {
   },
 });
 
-const nextEl = document.querySelector('.swiper-button-next');
-const prevEl = document.querySelector('.swiper-button-prev');
-const nextIcon = document.querySelector(
+const nextIcons = document.querySelectorAll(
   '.single-category__navigation-icon-next'
 );
-const prevIcon = document.querySelector(
+const prevIcons = document.querySelectorAll(
   '.single-category__navigation-icon-prev'
 );
 
-nextEl.addEventListener('click', () => {
-  if (nextEl.classList.contains('swiper-button-disabled')) {
-    return;
-  }
+nextIcons.forEach(icon => {
+  const nextEl = icon.closest('.swiper-button-next');
 
-  nextIcon.classList.add('icow35');
-  setTimeout(() => {
-    nextIcon.classList.remove('icow35');
-  }, 250);
+  nextEl.addEventListener('click', () => {
+    if (nextEl.classList.contains('swiper-button-disabled')) {
+      return;
+    }
+
+    icon.classList.add('icow35');
+    setTimeout(() => {
+      icon.classList.remove('icow35');
+    }, 250);
+  });
 });
 
-prevEl.addEventListener('click', () => {
-  if (prevEl.classList.contains('swiper-button-disabled')) {
-    return;
-  }
+prevIcons.forEach(icon => {
+  const prevEl = icon.closest('.swiper-button-prev');
 
-  prevIcon.classList.add('icow35');
-  setTimeout(() => {
-    prevIcon.classList.remove('icow35');
-  }, 250);
+  prevEl.addEventListener('click', () => {
+    if (prevEl.classList.contains('swiper-button-disabled')) {
+      return;
+    }
+
+    icon.classList.add('icow35');
+    setTimeout(() => {
+      icon.classList.remove('icow35');
+    }, 250);
+  });
 });
