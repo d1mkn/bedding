@@ -5,7 +5,9 @@
 }
 
 .single-category__item-link:hover .single-category__item-overlay,
-.single-category__item-link:focus .single-category__item-overlay {
+.single-category__item-link:focus .single-category__item-overlay,
+.single-category__sale-item-link:hover .single-category__item-overlay,
+.single-category__sale-item-link:focus .single-category__item-overlay {
   opacity: 1;
   cursor: pointer;
 }
