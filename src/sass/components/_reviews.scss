@@ -268,12 +268,19 @@
 }
 
 .reviews__form-textarea {
-  height: 189px;
   padding: 17px 25px;
   line-height: 1.3;
   border: 1px solid $light-grey;
   border-radius: 5px;
   resize: none;
+
+  @include tablet {
+    height: 101px;
+  }
+
+  @include desktop {
+    height: 189px;
+  }
 }
 
 .reviews__form-submit-btn-wrap {
@@ -323,7 +330,7 @@
 
 .h490 {
   @include tablet {
-    height: 466px;
+    height: 378px;
   }
 
   @include desktop {
