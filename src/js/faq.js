@@ -9,14 +9,14 @@ refs.faqItems.forEach(item => {
 
     if (item.classList.contains('active')) {
       answer.classList.toggle('visually-hidden');
-      item.style.maxHeight = item.scrollHeight + answer.scrollHeight + 'px';
+      item.style.maxHeight = `${answer.clientHeight} + ${item.scrollHeight} + px`;
       item.style.pointerEvents = 'none';
       setTimeout(() => {
         item.style.pointerEvents = 'auto';
       }, 1000);
     } else {
+      item.style.pointerEvents = 'none';
       setTimeout(() => {
-        item.style.pointerEvents = 'pointer';
         item.style.maxHeight = '0';
         item.removeAttribute('style');
         answer.classList.toggle('visually-hidden');
