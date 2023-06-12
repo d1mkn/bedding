@@ -108,6 +108,7 @@
 .cabinet-navigation__button {
   width: 100%;
   text-align: left;
+  transition: background-color $transition;
 
   @include tablet {
     padding: 12px 25px;

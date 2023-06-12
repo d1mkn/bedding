@@ -1,7 +1,6 @@
 const buttons = document.querySelectorAll('.cabinet-navigation__button');
 const sections = document.querySelectorAll('.cabinet-section');
 
-// Устанавливаем начальное состояние
 buttons[0].classList.add('active');
 sections[0].classList.add('cabinet-section-active');
 
