@@ -6,192 +6,202 @@
     <div class="ordering__content-left">
       <div class="ordering__form-wrap">
         <form class="ordering__form">
-          <p class="ordering__form-title">Контактні дані</p>
-          <div class="ordering__form-inputs-group">
-            <div class="ordering__form-input-wrap">
-              <input
-                class="ordering__form-input"
-                type="text"
-                id="first-name"
-                name="first-name"
-                placeholder="&#32;"
-                pattern="^[A-ZА-ЯЄІЇҐ][a-zA-Zа-яА-Яєіїґ]{1,}$"
-                required
-              />
-              <label class="ordering__form-label" for="first-name">Ім'я</label>
-              <p class="invalid-input-message">
-                Ім'я має починатися з великої літери
-              </p>
-            </div>
-
-            <div class="ordering__form-input-wrap">
-              <input
-                class="ordering__form-input"
-                type="text"
-                id="last-name"
-                name="last-name"
-                placeholder="&#32;"
-                pattern="^[A-ZА-ЯЄІЇҐ][a-zA-Zа-яА-Яєіїґ]{1,}$"
-                required
-              />
-              <label class="ordering__form-label" for="last-name"
-                >Прізвище</label
-              >
-              <p class="invalid-input-message">
-                Прізвище має починатися з великої літери
-              </p>
-            </div>
-
-            <div class="ordering__form-input-wrap">
-              <input
-                class="ordering__form-input"
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="&#32;"
-                pattern="^(\+38)?[0][0-9]{9}$"
-                required
-              />
-              <label class="ordering__form-label" for="phone">Телефон</label>
-              <p class="invalid-input-message">Формат +380ХХХХХХХХХ</p>
-            </div>
-
-            <div class="ordering__form-input-wrap">
-              <input
-                class="ordering__form-input"
-                type="email"
-                id="email"
-                name="email"
-                placeholder="&#32;"
-                pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
-                required
-              />
-              <label class="ordering__form-label" for="email"
-                >Електронна адреса</label
-              >
-              <p class="invalid-input-message">
-                Перевірте правильність вказаної електронної адреси
-              </p>
-            </div>
-          </div>
-
-          <p class="ordering__form-title">Адреса доставки</p>
-          <div>
-            <div class="ordering__form-inputs-group">
-              <div class="ordering__form-select-wrap">
-                <select
-                  class="ordering__form-select"
-                  id="region"
-                  name="region"
-                  required
-                >
-                  <option value="">Область</option>
-                </select>
-              </div>
-
-              <div class="ordering__form-select-wrap">
-                <select
-                  class="ordering__form-select"
-                  id="city"
-                  name="city"
-                  required
-                >
-                  <option value="">Місто</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <p class="ordering__form-title">Спосіб доставки</p>
-
-          <div class="ordering__form-checkbox-wrap">
-            <input
-              class="ordering__form-checkbox js-checkbox1"
-              type="checkbox"
-              id="post-office"
-              name="post-office"
-            />
-            <label for="post-office"> Відділення Нової Пошти</label>
-          </div>
-
-          <div class="visually-hidden js-ordering-data1">
-            <div class="ordering__form-inputs-group">
-              <div class="ordering__form-select-wrap w100">
-                <select
-                  class="ordering__form-select w98"
-                  id="post-office-address"
-                  name="post-office-address"
-                >
-                  <option value="">Адреса відділення</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <div class="ordering__form-checkbox-wrap">
-            <input
-              class="ordering__form-checkbox js-checkbox2"
-              type="checkbox"
-              id="courier"
-              name="courier"
-            />
-            <label for="courier">Кур'єр Нової Пошти</label>
-          </div>
-
-          <div class="visually-hidden js-ordering-data2">
-            <div class="ordering__form-inputs-group">
-              <div class="ordering__form-input-wrap w100">
-                <input
-                  class="ordering__form-input w100"
-                  type="text"
-                  id="street"
-                  name="street"
-                  placeholder="&#32;"
-                />
-                <label class="ordering__form-label" for="email"
-                  >Назва вулиці</label
-                >
-              </div>
-            </div>
-
+          <div class="ordering__form-section">
+            <p class="ordering__form-title">Контактні дані</p>
             <div class="ordering__form-inputs-group">
               <div class="ordering__form-input-wrap">
                 <input
                   class="ordering__form-input"
                   type="text"
-                  id="house-number"
-                  name="house-number"
+                  id="first-name"
+                  name="first-name"
                   placeholder="&#32;"
+                  pattern="^[A-ZА-ЯЄІЇҐ][a-zA-Zа-яА-Яєіїґ]{1,}$"
+                  required
                 />
-                <label class="ordering__form-label" for="email"
-                  >Номер будинку</label
+                <label class="ordering__form-label" for="first-name"
+                  >Ім'я</label
                 >
+                <p class="invalid-input-message">
+                  Ім'я має починатися з великої літери
+                </p>
               </div>
 
               <div class="ordering__form-input-wrap">
                 <input
                   class="ordering__form-input"
                   type="text"
-                  id="apartment-number"
-                  name="apartment-number"
+                  id="last-name"
+                  name="last-name"
                   placeholder="&#32;"
+                  pattern="^[A-ZА-ЯЄІЇҐ][a-zA-Zа-яА-Яєіїґ]{1,}$"
+                  required
+                />
+                <label class="ordering__form-label" for="last-name"
+                  >Прізвище</label
+                >
+                <p class="invalid-input-message">
+                  Прізвище має починатися з великої літери
+                </p>
+              </div>
+
+              <div class="ordering__form-input-wrap">
+                <input
+                  class="ordering__form-input"
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="&#32;"
+                  pattern="^(\+38)?[0][0-9]{9}$"
+                  required
+                />
+                <label class="ordering__form-label" for="phone">Телефон</label>
+                <p class="invalid-input-message">Формат +380ХХХХХХХХХ</p>
+              </div>
+
+              <div class="ordering__form-input-wrap">
+                <input
+                  class="ordering__form-input"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="&#32;"
+                  pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+                  required
                 />
                 <label class="ordering__form-label" for="email"
-                  >Номер квартири</label
+                  >Електронна адреса</label
                 >
+                <p class="invalid-input-message">
+                  Перевірте правильність вказаної електронної адреси
+                </p>
               </div>
             </div>
           </div>
 
-          <p class="ordering__form-title">Спосіб оплати</p>
-          <div class="ordering__form-checkbox-wrap">
-            <input
-              class="ordering__form-checkbox"
-              type="checkbox"
-              id="pay-on-delivery"
-              name="pay-on-delivery"
-            />
-            <label for="pay-on-delivery">Оплата при отриманні замовлення</label>
+          <div class="ordering__form-section">
+            <p class="ordering__form-title">Адреса доставки</p>
+            <div>
+              <div class="ordering__form-inputs-group">
+                <div class="ordering__form-select-wrap">
+                  <select
+                    class="ordering__form-select"
+                    id="region"
+                    name="region"
+                    required
+                  >
+                    <option value="">Область</option>
+                  </select>
+                </div>
+
+                <div class="ordering__form-select-wrap">
+                  <select
+                    class="ordering__form-select"
+                    id="city"
+                    name="city"
+                    required
+                  >
+                    <option value="">Місто</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ordering__form-section">
+            <p class="ordering__form-title">Спосіб доставки</p>
+            <div class="ordering__form-checkbox-wrap">
+              <input
+                class="ordering__form-checkbox js-checkbox1"
+                type="checkbox"
+                id="post-office"
+                name="post-office"
+              />
+              <label for="post-office"> Відділення Нової Пошти</label>
+            </div>
+
+            <div class="visually-hidden js-ordering-data1">
+              <div class="ordering__form-inputs-group">
+                <div class="ordering__form-select-wrap w100">
+                  <select
+                    class="ordering__form-select w98"
+                    id="post-office-address"
+                    name="post-office-address"
+                  >
+                    <option value="">Адреса відділення</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="ordering__form-checkbox-wrap m0">
+              <input
+                class="ordering__form-checkbox js-checkbox2"
+                type="checkbox"
+                id="courier"
+                name="courier"
+              />
+              <label for="courier">Кур'єр Нової Пошти</label>
+            </div>
+
+            <div class="visually-hidden js-ordering-data2">
+              <div class="ordering__form-inputs-group">
+                <div class="ordering__form-input-wrap w100">
+                  <input
+                    class="ordering__form-input w100"
+                    type="text"
+                    id="street"
+                    name="street"
+                    placeholder="&#32;"
+                  />
+                  <label class="ordering__form-label" for="email"
+                    >Назва вулиці</label
+                  >
+                </div>
+                <div class="ordering__form-inputs-group">
+                  <div class="ordering__form-input-wrap">
+                    <input
+                      class="ordering__form-input"
+                      type="text"
+                      id="house-number"
+                      name="house-number"
+                      placeholder="&#32;"
+                    />
+                    <label class="ordering__form-label" for="email"
+                      >Номер будинку</label
+                    >
+                  </div>
+
+                  <div class="ordering__form-input-wrap">
+                    <input
+                      class="ordering__form-input"
+                      type="text"
+                      id="apartment-number"
+                      name="apartment-number"
+                      placeholder="&#32;"
+                    />
+                    <label class="ordering__form-label" for="email"
+                      >Номер квартири</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ordering__form-section">
+            <p class="ordering__form-title">Спосіб оплати</p>
+            <div class="ordering__form-checkbox-wrap">
+              <input
+                class="ordering__form-checkbox"
+                type="checkbox"
+                id="pay-on-delivery"
+                name="pay-on-delivery"
+              />
+              <label for="pay-on-delivery"
+                >Оплата при отриманні замовлення</label
+              >
+            </div>
             <div class="pay-on-delivery-info">
               <p class="pay-on-delivery-info-text">
                 Готівкою кур`єру або на відділенні Нової Пошти (враховуйте
@@ -202,18 +212,18 @@
                 відділенні Нової Пошти.
               </p>
             </div>
-          </div>
 
-          <div class="ordering__form-checkbox-wrap">
-            <input
-              class="ordering__form-checkbox"
-              type="checkbox"
-              id="online-payment"
-              name="online-payment"
-            />
-            <label for="online-payment"
-              >Оплата картою онлайн (через LiqPay)</label
-            >
+            <div class="ordering__form-checkbox-wrap m0">
+              <input
+                class="ordering__form-checkbox"
+                type="checkbox"
+                id="online-payment"
+                name="online-payment"
+              />
+              <label for="online-payment"
+                >Оплата картою онлайн (через LiqPay)</label
+              >
+            </div>
           </div>
 
           <p class="ordering__form-title">Додати коментар до замовлення</p>
@@ -234,10 +244,12 @@
         <p class="ordering__details-text">
           <svg class="ordering__details-icon" width="24" height="24">
             <use href="./images/icons.svg#cart"></use></svg
-          >Показати деталі замовлення<span
-            ><svg class="ordering__details-icon" width="13" height="8">
-              <use href="./images/icons.svg#faq-arrow"></use></svg
-          ></span>
+          >Показати деталі замовлення
+          <span class="ordering__details-icon-wrap">
+            <svg class="ordering__details-icon" width="13" height="8">
+              <use href="./images/icons.svg#faq-arrow"></use>
+            </svg>
+          </span>
         </p>
 
         <p class="ordering__details-text">*** грн</p>

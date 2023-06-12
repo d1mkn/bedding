@@ -18,9 +18,22 @@ checkbox2.addEventListener('click', () => {
 });
 
 orderingSummary.addEventListener('click', () => {
-  if (orderingDetails.hasAttribute('style')) {
-    orderingDetails.removeAttribute('style');
-    return;
+  orderingSummary.classList.toggle('active');
+  orderingDetails.classList.toggle('active');
+
+  if (orderingSummary.classList.contains('active')) {
+    orderingSummary.style.display = 'block';
+    orderingSummary.style.maxHeight = `${orderingDetails.clientHeight} + ${orderingSummary.scrollHeight} + px`;
+    orderingSummary.style.pointerEvents = 'none';
+    setTimeout(() => {
+      orderingSummary.style.pointerEvents = 'auto';
+    }, 1000);
+  } else {
+    orderingSummary.style.pointerEvents = 'none';
+    setTimeout(() => {
+      orderingSummary.style.display = 'none';
+      orderingSummary.style.maxHeight = '0';
+      orderingSummary.removeAttribute('style');
+    }, 1000);
   }
-  orderingDetails.style.display = 'block';
 });
