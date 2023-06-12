@@ -8,7 +8,7 @@ formShowBtn.addEventListener('click', () => {
     formShowBtn.setAttribute('disabled', 'true');
     form.classList.toggle('visually-hidden');
     form.classList.toggle('h0');
-    form.classList.toggle('h486');
+    form.classList.toggle('h490');
     form.classList.toggle('o0');
 
     setTimeout(() => {
@@ -17,7 +17,7 @@ formShowBtn.addEventListener('click', () => {
   } else {
     formShowBtn.setAttribute('disabled', 'true');
     form.classList.toggle('h0');
-    form.classList.toggle('h486');
+    form.classList.toggle('h490');
     form.classList.toggle('o0');
 
     setTimeout(() => {
