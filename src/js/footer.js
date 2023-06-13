@@ -80,3 +80,5 @@ function toggleContacts() {
     }, 500);
   }
 }
+
+checkInnerWidth();
