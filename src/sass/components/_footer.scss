@@ -168,16 +168,11 @@ footer {
 .footer__contacts-wrap {
   max-height: 0px;
   transition: max-height 0.5s, padding 0.5s;
+  overflow: hidden;
 
   @include tablet {
     max-height: fit-content;
   }
-}
-
-.footer__catalog,
-.footer__info,
-.footer__contacts {
-  overflow: hidden;
 }
 
 .footer__catalog.active .footer__catalog-list,
