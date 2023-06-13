@@ -101,6 +101,12 @@ footer {
   }
 }
 
+.footer__catalog,
+.footer__info,
+.footer__contacts {
+  cursor: pointer;
+}
+
 .footer__catalog-title,
 .footer__info-title,
 .footer__contacts-title {
