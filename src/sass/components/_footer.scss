@@ -9,6 +9,7 @@ footer {
 }
 
 .footer-wrap {
+  max-height: fit-content;
   background-color: $em-dark-blue;
 }
 
@@ -105,6 +106,10 @@ footer {
 .footer__info,
 .footer__contacts {
   cursor: pointer;
+
+  @include tablet {
+    cursor: auto;
+  }
 }
 
 .footer__catalog-title,
