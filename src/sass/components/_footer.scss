@@ -163,6 +163,12 @@ footer {
   }
 }
 
+.footer__catalog.active .footer__section-arrow,
+.footer__info.active .footer__section-arrow,
+.footer__contacts.active .footer__section-arrow {
+  transform: rotate(-180deg);
+}
+
 .footer__catalog-list,
 .footer__info-list,
 .footer__contacts-wrap {
@@ -180,12 +186,6 @@ footer {
 .footer__contacts.active .footer__contacts-wrap {
   max-height: 1000px;
   transition: max-height 0.5s, padding-top 0.5s, padding-bottom 0.5s;
-}
-
-.footer__catalog.active .footer__section-arrow,
-.footer__info.active .footer__section-arrow,
-.footer__contacts.active .footer__section-arrow {
-  transform: rotate(-180deg);
 }
 
 .footer__catalog-link,
