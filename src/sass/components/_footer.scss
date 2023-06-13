@@ -13,10 +13,16 @@ footer {
 }
 
 .footer-wrap .container {
-  display: flex;
-  flex-direction: column-reverse;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  padding: 15px 15px;
 
   @include tablet {
+    display: flex;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
     padding: 20px 52px;
     flex-direction: row;
@@ -29,10 +35,13 @@ footer {
 }
 
 .footer__socials {
+  margin-bottom: 20px;
+
+  grid-area: 2 / 1 / 2 / 2;
+
   @include tablet {
     display: flex;
     margin-bottom: 30px;
-    gap: 31px;
     align-items: center;
   }
 
@@ -57,13 +66,31 @@ footer {
   fill: $main-blue;
 }
 
+.footer__logo {
+  @include less-then-tablet {
+    margin-right: 30px;
+  }
+}
+
 .footer__logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include tablet {
+    gap: 30px;
+  }
+
   @include desktop {
-    margin-bottom: 30px;
+    display: block;
   }
 }
 
 .footer__sections {
+  margin-bottom: 20px;
+
+  grid-area: 1 / 1 / 2 / 2;
+
   @include tablet {
     display: flex;
     gap: 45px;
@@ -75,19 +102,64 @@ footer {
 }
 
 .footer__catalog-title,
-.footer__info-title {
-  margin-bottom: 20px;
+.footer__info-title,
+.footer__contacts-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 0.5px solid $white;
+
+  @include tablet {
+    display: block;
+    padding-bottom: 0px;
+    border: none;
+  }
+
+  @include desktop {
+    margin-bottom: 20px;
+  }
+}
+
+.footer__info-title,
+.footer__contacts-title {
+  padding-top: 10px;
+
+  @include tablet {
+    padding-top: 0px;
+  }
+}
+
+.footer__contacts-title {
+  @include tablet {
+    display: none;
+  }
+}
+
+.footer__section-arrow {
+  fill: $white;
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .footer__catalog-list,
 .footer__info-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-
   font-weight: 400;
   font-size: 16px;
   line-height: 1.3;
+
+  @include tablet {
+    gap: 5px;
+  }
+
+  @include desktop {
+    gap: 10px;
+  }
 }
 
 .footer__catalog-link,
@@ -109,13 +181,33 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
+
+  @include tablet {
+    justify-content: flex-start;
+  }
+}
+
+.footer__contacts-wrap {
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  @include desktop {
+    gap: 20px;
+  }
 }
 
 .footer__contacts-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
+
+  @include tablet {
+    gap: 10px;
+  }
 }
 
 .footer__contacts-phone,
@@ -133,12 +225,15 @@ footer {
 }
 
 .footer__copyright {
-  width: fit-content;
-  margin-top: 53px;
+  display: flex;
+  justify-content: center;
+
+  grid-area: 3 / 1 / 3 / 2;
 
   line-height: 1.3;
 
   @include tablet {
+    display: block;
     width: 768px;
   }
 

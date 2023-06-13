@@ -3,3 +3,4 @@ import '../modal';
 import '../faq';
 import '../reviews';
 import '../singleCategorySwiper';
+import '../footer';
