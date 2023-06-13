@@ -21,19 +21,17 @@ function checkInnerWidth() {
     infoList.classList.add('visually-hidden');
     contactsList.classList.add('visually-hidden');
 
-    catalog.addEventListener('touchend', toggleCatalog);
-    info.addEventListener('touchend', toggleInfo);
-    contacts.addEventListener('touchend', toggleContacts);
+    catalog.addEventListener('click', toggleCatalog);
+    info.addEventListener('click', toggleInfo);
+    contacts.addEventListener('click', toggleContacts);
   }
 }
-checkInnerWidth();
 
 function toggleCatalog() {
   catalog.classList.toggle('active');
 
   if (catalog.classList.contains('active')) {
     catalogList.classList.remove('visually-hidden');
-    catalogList.style.maxHeight = `${catalogList.clientHeight} + ${catalog.scrollHeight} + px`;
     catalog.style.pointerEvents = 'none';
     setTimeout(() => {
       catalog.style.pointerEvents = 'auto';
@@ -41,7 +39,6 @@ function toggleCatalog() {
   } else {
     catalog.style.pointerEvents = 'none';
     setTimeout(() => {
-      catalog.style.maxHeight = '0';
       catalog.removeAttribute('style');
       catalogList.classList.toggle('visually-hidden');
     }, 500);
@@ -53,7 +50,6 @@ function toggleInfo() {
 
   if (info.classList.contains('active')) {
     infoList.classList.remove('visually-hidden');
-    infoList.style.maxHeight = `${infoList.clientHeight} + ${info.scrollHeight} + px`;
     info.style.pointerEvents = 'none';
     setTimeout(() => {
       info.style.pointerEvents = 'auto';
@@ -61,7 +57,6 @@ function toggleInfo() {
   } else {
     info.style.pointerEvents = 'none';
     setTimeout(() => {
-      info.style.maxHeight = '0';
       info.removeAttribute('style');
       infoList.classList.toggle('visually-hidden');
     }, 500);
@@ -73,7 +68,6 @@ function toggleContacts() {
 
   if (contacts.classList.contains('active')) {
     contactsList.classList.remove('visually-hidden');
-    contactsList.style.maxHeight = `${contactsList.clientHeight} + ${contacts.scrollHeight} + px`;
     contacts.style.pointerEvents = 'none';
     setTimeout(() => {
       contacts.style.pointerEvents = 'auto';
@@ -81,7 +75,6 @@ function toggleContacts() {
   } else {
     contacts.style.pointerEvents = 'none';
     setTimeout(() => {
-      contacts.style.maxHeight = '0';
       contacts.removeAttribute('style');
       contactsList.classList.toggle('visually-hidden');
     }, 500);
