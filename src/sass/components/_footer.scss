@@ -83,7 +83,7 @@ footer {
   }
 
   @include desktop {
-    display: block;
+    flex-direction: column;
   }
 }
 
