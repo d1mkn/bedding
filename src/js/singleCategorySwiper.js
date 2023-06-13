@@ -5,55 +5,60 @@ Swiper.use([Navigation]);
 const swiper = new Swiper('.swiper-container', {
   loop: false,
 
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  breakpoints: {
-    768: {
-      slidesPerView: 'auto',
-      slidesPerGroup: 1,
-    },
-    1240: {
-      slidesPerView: 'auto',
-      slidesPerGroup: 1,
-    },
-  },
-
   on: {
-    slideChange: function () {
-      const nextEl = this.navigation.nextEl;
-      const prevEl = this.navigation.prevEl;
-
-      if (nextEl.classList.contains('swiper-button-disabled')) {
-        nextEl.style.opacity = '0.7';
-      } else {
-        nextEl.removeAttribute('style');
-      }
-
-      if (prevEl.classList.contains('swiper-button-disabled')) {
-        prevEl.style.opacity = '0.7';
-      } else {
-        prevEl.removeAttribute('style');
-      }
-    },
-
     init: function () {
       const nextEl = this.navigation.nextEl;
       const prevEl = this.navigation.prevEl;
 
       if (nextEl.classList.contains('swiper-button-disabled')) {
-        nextEl.style.opacity = '0.7';
+        nextEl.style.opacity = '0.5';
       } else {
         nextEl.removeAttribute('style');
       }
 
       if (prevEl.classList.contains('swiper-button-disabled')) {
-        prevEl.style.opacity = '0.7';
+        prevEl.style.opacity = '0.5';
       } else {
         prevEl.removeAttribute('style');
       }
+    },
+
+    slideChange: function () {
+      const nextEl = this.navigation.nextEl;
+      const prevEl = this.navigation.prevEl;
+
+      if (nextEl.classList.contains('swiper-button-disabled')) {
+        nextEl.style.opacity = '0.5';
+      } else {
+        nextEl.removeAttribute('style');
+      }
+
+      if (prevEl.classList.contains('swiper-button-disabled')) {
+        prevEl.style.opacity = '0.5';
+      } else {
+        prevEl.removeAttribute('style');
+      }
+    },
+  },
+
+  breakpoints: {
+    320: {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      slidesPerView: 'auto',
+      slidesPerGroup: 1,
+    },
+
+    768: {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      slidesPerView: 'auto',
+      slidesPerGroup: 1,
     },
   },
 });
@@ -76,7 +81,7 @@ nextIcons.forEach(icon => {
     icon.classList.add('icow35');
     setTimeout(() => {
       icon.classList.remove('icow35');
-    }, 250);
+    }, 200);
   });
 });
 
@@ -91,6 +96,6 @@ prevIcons.forEach(icon => {
     icon.classList.add('icow35');
     setTimeout(() => {
       icon.classList.remove('icow35');
-    }, 250);
+    }, 200);
   });
 });

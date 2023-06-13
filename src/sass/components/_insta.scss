@@ -1,26 +1,42 @@
 .insta {
+  background: url('../images/feather.png');
+  background-size: 332px 260px;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 30%;
+
   background-color: $pastel;
 
-  .container {
-    display: flex;
-    justify-content: space-between;
+  @include tablet {
+    background: none;
+    background-color: $pastel;
+  }
+}
 
-    @include tablet {
-      padding: 19px 51px 19px 0px;
-    }
+.insta .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 180px;
+  padding: 15px 0px;
 
-    @include desktop {
-      padding: 45px 0px;
-    }
+  @include tablet {
+    padding: 19px 51px 19px 0px;
+    flex-direction: row;
+    align-items: unset;
+  }
+
+  @include desktop {
+    padding: 45px 0px;
   }
 }
 
 .insta__text {
-  position: relative;
-  width: 100%;
-  background: url('../images/feather.png');
-
   @include tablet {
+    position: relative;
+    width: 100%;
+    background: url('../images/feather.png');
     background-size: 465px 387px;
     background-repeat: no-repeat;
     background-position-y: 30%;
@@ -28,17 +44,17 @@
 
   @include desktop {
     background-size: 642px 571px;
-    background-repeat: no-repeat;
-    background-position-y: 30%;
   }
 }
 
 .insta__text-wrap {
-  position: absolute;
+  width: 160px;
 
   @include tablet {
-    top: 63px;
-    right: 49px;
+    position: absolute;
+    width: unset;
+    top: 60px;
+    right: 25px;
   }
 
   @include desktop {
@@ -48,10 +64,11 @@
 }
 
 .insta__link-text {
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.3;
 
   @include tablet {
+    font-weight: 600;
     width: 263px;
     margin-bottom: 6px;
     font-size: 24px;
@@ -65,6 +82,7 @@
 }
 
 .insta__link {
+  font-weight: 600;
   line-height: 1.3;
 
   @include tablet {
@@ -78,11 +96,13 @@
 
 .insta__gallery-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  gap: 5px;
+  min-width: 295px;
 
   @include tablet {
     width: 262px;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   @include desktop {
@@ -93,6 +113,8 @@
 .insta__gallery-item {
   background-color: $light-grey;
   border-radius: 5px;
+  min-width: 70px;
+  min-height: 70px;
 
   @include tablet {
     width: 126px;

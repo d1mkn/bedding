@@ -16,14 +16,15 @@
   position: absolute;
   z-index: 2;
   width: 100%;
-  height: 40px;
+  height: 35px;
   padding: 0px 20px;
-  right: 0;
-  left: 0;
+  top: 205px;
+  left: 175px;
   transition: opacity $transition;
+  opacity: 1;
 
   @include tablet {
-    opacity: 1;
+    height: 40px;
     top: 240px;
     left: 245px;
   }
@@ -36,6 +37,7 @@
 }
 
 .single-category__item-overlay-text {
+  display: none;
   padding: 8px 35px;
   background-color: $white;
   border: 1px solid $light-grey;
@@ -44,10 +46,6 @@
   transition: background-color $transition;
 
   text-align: center;
-
-  @include tablet {
-    display: none;
-  }
 
   @include desktop {
     display: block;
@@ -61,8 +59,11 @@
 }
 
 .single-category__item-overlay-text-tab {
-  width: 40px;
-  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
   background-color: $white;
   border: 1px solid $light-grey;
   border-radius: 5px;
@@ -73,9 +74,8 @@
   line-height: 1.3;
 
   @include tablet {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 40px;
+    height: 40px;
   }
 
   @include desktop {
@@ -92,6 +92,8 @@
 
 .single-category__item-img {
   display: block;
+  min-width: 240px;
+  min-height: 250px;
   background-color: $white;
   border: 1px solid $light-grey;
   border-radius: 5px;
@@ -99,6 +101,8 @@
   @include tablet {
     width: 325px;
     height: 300px;
+    min-width: 0px;
+    min-height: 0px;
   }
 
   @include desktop {
@@ -113,13 +117,49 @@
 }
 
 .single-category__item-title {
+  width: 240px;
   font-weight: 600;
-  font-size: 20;
+  font-size: 16;
   line-height: 1.3;
+
+  @include tablet {
+    width: 325px;
+    font-size: 20;
+  }
+
+  @include desktop {
+    width: 295px;
+  }
 }
 
 .single-category__item-desc {
+  width: 240px;
+  font-size: 15px;
   line-height: 1.3;
+
+  @include tablet {
+    width: 325px;
+    font-size: 16px;
+  }
+
+  @include desktop {
+    width: 295px;
+  }
+}
+
+.single-category__item-price {
+  width: 240px;
+  font-size: 15px;
+  line-height: 1.3;
+
+  @include tablet {
+    width: 325px;
+    font-size: 16px;
+  }
+
+  @include desktop {
+    width: 295px;
+  }
 }
 
 .modal__body-color-picker {

@@ -19,9 +19,6 @@
 @import './common/reset';
 @import './common/container';
 
-// vendors
-@import './vendors/visually-hidden';
-
 // header
 @import './components/header';
 
@@ -82,3 +79,6 @@
 
 // cabinet
 @import './components/cabinet-page';
+
+// vendors
+@import './vendors/visually-hidden';

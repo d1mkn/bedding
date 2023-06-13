@@ -6,7 +6,7 @@ function openModal() {
   refs.modal.classList.remove('visually-hidden');
   refs.modalBackdrop.classList.remove('visually-hidden');
   refs.modalBackdrop.classList.add('animate__fadeIn');
-  document.body.classList.toggle('modal-open');
+  document.body.classList.add('modal-open');
 }
 
 function closeModal() {
@@ -16,7 +16,7 @@ function closeModal() {
     refs.modalBackdrop.classList.add('visually-hidden');
     refs.modal.classList.add('visually-hidden');
     refs.modalBackdrop.classList.remove('animate__fadeOut');
-    document.body.classList.toggle('modal-open');
+    document.body.classList.remove('modal-open');
   }, 500);
 }
 

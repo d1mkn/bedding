@@ -24,16 +24,18 @@
 
 .modal__dialog {
   position: absolute;
-  top: 45%;
+
   left: 50%;
 
   z-index: 3;
 
   @include tablet {
+    top: 35%;
     transform: translate(-50%, -40%) scale(1);
   }
 
   @include desktop {
+    top: 45%;
     transform: translate(-50%, -50%) scale(1);
   }
 }
@@ -154,6 +156,10 @@
 
 .modal__body-color-wrap {
   margin-bottom: 5px;
+}
+
+.modal__body-item-color {
+  color: $light-grey;
 }
 
 .modal__body-color {

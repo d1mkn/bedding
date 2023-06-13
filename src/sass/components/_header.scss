@@ -32,10 +32,18 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  height: 70px;
+  @include mobile {
+    padding: 0px 15px;
+    height: 45px;
+  }
 
-  @include less-then-desktop {
+  @include tablet {
     padding: 0px 51px;
+    height: 70px;
+  }
+
+  @include desktop {
+    padding: 0;
   }
 }
 
@@ -103,6 +111,16 @@ header {
 
 .header__logo {
   fill: currentColor;
+
+  @include mobile {
+    width: 130px;
+    height: 36px;
+  }
+
+  @include tablet {
+    width: 188px;
+    height: 50px;
+  }
 }
 
 .header__controls-list {
@@ -113,16 +131,34 @@ header {
 .header__controls-item {
   display: flex;
   align-items: center;
-  height: 70px;
+  height: 20px;
+
+  @include tablet {
+    height: 70px;
+  }
 }
 
 .header__controls-item-icon {
+  height: 20px;
   transition: fill $transition;
+
+  @include tablet {
+    height: 70px;
+  }
 }
 
 .header__controls-item:hover .header__controls-item-icon,
 .header__controls-item:focus .header__controls-item-icon {
   fill: $dark-blue;
+}
+
+.search,
+.user {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
 }
 
 .navigation__dropdown-wrap {
@@ -207,5 +243,14 @@ header {
 .mobile-menu-btn {
   @include desktop {
     display: none;
+  }
+}
+
+.mobile-menu-icon {
+  width: 20px;
+  height: 14px;
+
+  @include tablet {
+    height: 25px;
   }
 }

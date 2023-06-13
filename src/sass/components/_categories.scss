@@ -1,5 +1,10 @@
 .categories {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  overflow: hidden;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
 
   @include desktop {
     margin-bottom: 90px;
@@ -19,16 +24,21 @@
 }
 
 .categories__title {
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: calc(24px / 20px);
+
   @include tablet {
     margin-bottom: 25px;
-    font-weight: 500;
+    text-align: center;
     font-size: 30px;
     line-height: calc(37px / 30px);
   }
 
   @include desktop {
     margin-bottom: 40px;
-    font-weight: 500;
     font-size: 32px;
     line-height: calc(39px / 32px);
   }
@@ -36,12 +46,21 @@
 
 .categories__list {
   display: flex;
+  gap: 10px;
+  min-width: 320px;
 
   @include tablet {
+    min-width: 0px;
     gap: 15px;
   }
 
   @include desktop {
-    gap: 20px;
+    gap: 22px;
+  }
+}
+
+.categories-wrap.container {
+  @include tablet {
+    padding: 0px;
   }
 }
