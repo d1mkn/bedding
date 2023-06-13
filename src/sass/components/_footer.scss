@@ -162,6 +162,30 @@ footer {
   }
 }
 
+.footer__catalog-list,
+.footer__info-list,
+.footer__contacts-wrap {
+  max-height: 0px;
+  transition: max-height 0.5s, padding 0.5s;
+
+  @include tablet {
+    max-height: fit-content;
+  }
+}
+
+.footer__catalog,
+.footer__info,
+.footer__contacts {
+  overflow: hidden;
+}
+
+.footer__catalog.active .footer__catalog-list,
+.footer__info.active .footer__info-list,
+.footer__contacts.active .footer__contacts-wrap {
+  max-height: 1000px;
+  transition: max-height 0.5s, padding-top 0.5s, padding-bottom 0.5s;
+}
+
 .footer__catalog-link,
 .footer__info-link,
 .footer__contacts-link {
@@ -189,24 +213,18 @@ footer {
 }
 
 .footer__contacts-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-height: 0px;
+
   @include tablet {
-    display: flex;
-    flex-direction: column;
+    max-height: fit-content;
     gap: 10px;
   }
 
   @include desktop {
     gap: 20px;
-  }
-}
-
-.footer__contacts-list {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-
-  @include tablet {
-    gap: 10px;
   }
 }
 

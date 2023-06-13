@@ -33,10 +33,10 @@ export const refs = {
   formShowBtn: document.querySelector('.js-form-open-btn'),
   reviewForm: document.querySelector('.js-review-form'),
   // footer
-  catalogTitle: document.querySelector('.footer__catalog-title'),
+  catalogTitle: document.querySelector('.footer__catalog'),
   catalogList: document.querySelector('.footer__catalog-list'),
-  infoTitle: document.querySelector('.footer__info-title'),
+  infoTitle: document.querySelector('.footer__info'),
   infoList: document.querySelector('.footer__info-list'),
-  contactsTitle: document.querySelector('.footer__contacts-title'),
+  contactsTitle: document.querySelector('.footer__contacts'),
   contactsList: document.querySelector('.footer__contacts-wrap'),
 };
