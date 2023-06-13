@@ -21,9 +21,9 @@ function checkInnerWidth() {
     infoList.classList.add('visually-hidden');
     contactsList.classList.add('visually-hidden');
 
-    catalog.addEventListener('click', toggleCatalog);
-    info.addEventListener('click', toggleInfo);
-    contacts.addEventListener('click', toggleContacts);
+    catalog.addEventListener('touchstart', toggleCatalog);
+    info.addEventListener('touchstart', toggleInfo);
+    contacts.addEventListener('touchstart', toggleContacts);
   }
 }
 
