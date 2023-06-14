@@ -2,7 +2,7 @@ import { refs } from './refs/refs';
 
 const sections = refs.footerSections;
 
-// window.addEventListener('deviceorientation', checkInnerWidth);
+window.addEventListener('resize', checkInnerWidth);
 
 function checkInnerWidth() {
   if (document.documentElement.clientWidth > 767) {
@@ -26,9 +26,7 @@ sections.forEach(section => {
 
     if (section.classList.contains('active')) {
       section.style.pointerEvents = 'none';
-      setTimeout(() => {
-        info.classList.toggle('visually-hidden');
-      }, 100);
+      info.classList.toggle('visually-hidden');
       setTimeout(() => {
         section.style.pointerEvents = 'auto';
       }, 500);
