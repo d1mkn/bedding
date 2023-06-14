@@ -31,10 +31,7 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-
-  @include tablet {
-    gap: 10px;
-  }
+  gap: 10px;
 
   @include desktop {
     gap: 20px;
@@ -81,13 +78,14 @@
 .faq__answer {
   max-height: 0;
   overflow: hidden;
-  padding: 0px 30px;
+  padding: 0px 10px;
   cursor: auto;
   transition: max-height 1s, padding 1s;
-
+  font-size: 14px;
   line-height: 1.3;
 
   @include tablet {
+    padding: 0px 30px;
     font-size: 15px;
   }
 
@@ -98,8 +96,12 @@
 
 .faq__item.active .faq__answer {
   max-height: 1000px;
-  padding: 20px 30px;
+  padding: 5px 10px;
   transition: max-height 1s, padding-top 0.5s, padding-bottom 0.5s;
+
+  @include tablet {
+    padding: 20px 30px;
+  }
 }
 
 .faq__item.active .faq__question-icon {
