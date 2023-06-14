@@ -33,6 +33,7 @@ export const refs = {
   formShowBtn: document.querySelector('.js-form-open-btn'),
   reviewForm: document.querySelector('.js-review-form'),
   // footer
+  footerSections: document.querySelectorAll('.js-footer-section'),
   catalogTitle: document.querySelector('.footer__catalog'),
   catalogList: document.querySelector('.footer__catalog-list'),
   infoTitle: document.querySelector('.footer__info'),
