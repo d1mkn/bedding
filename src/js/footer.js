@@ -3,7 +3,6 @@ import { refs } from './refs/refs';
 const sections = refs.footerSections;
 
 window.addEventListener('deviceorientation', checkInnerWidth);
-window.addEventListener('resize', checkInnerWidth);
 
 function checkInnerWidth() {
   if (document.documentElement.clientWidth > 767) {
