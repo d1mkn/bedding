@@ -25,8 +25,10 @@ sections.forEach(section => {
     section.classList.toggle('active');
 
     if (section.classList.contains('active')) {
-      info.classList.toggle('visually-hidden');
       section.style.pointerEvents = 'none';
+      setTimeout(() => {
+        info.classList.toggle('visually-hidden');
+      }, 100);
       setTimeout(() => {
         section.style.pointerEvents = 'auto';
       }, 500);
