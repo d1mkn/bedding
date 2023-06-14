@@ -26,7 +26,7 @@ sections.forEach(section => {
     section.classList.toggle('active');
 
     if (section.classList.contains('active')) {
-      info.classList.remove('visually-hidden');
+      info.classList.toggle('visually-hidden');
       section.style.pointerEvents = 'none';
       setTimeout(() => {
         section.style.pointerEvents = 'auto';
