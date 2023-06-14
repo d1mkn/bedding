@@ -15,6 +15,10 @@
 }
 
 .best-seller-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr;
+
   @include tablet {
     display: flex;
     gap: 15px;

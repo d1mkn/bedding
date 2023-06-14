@@ -1,4 +1,6 @@
 .category-page__text {
+  margin-bottom: 15px;
+
   @include tablet {
     margin-bottom: 30px;
   }
@@ -9,14 +11,11 @@
 }
 
 .category-page__title {
+  margin-bottom: 10px;
   text-align: center;
   font-weight: 500;
-
-  @include tablet {
-    margin-bottom: 10px;
-    font-size: 24px;
-    line-height: calc(29px / 24px);
-  }
+  font-size: 24px;
+  line-height: calc(29px / 24px);
 
   @include desktop {
     margin-bottom: 20px;
@@ -29,10 +28,10 @@
   margin: 0px auto;
   text-align: center;
   line-height: 1.3;
+  font-size: 15px;
 
   @include tablet {
     width: 535px;
-    font-size: 15px;
   }
 
   @include desktop {
@@ -44,12 +43,21 @@
 .category-page__filter-wrap {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   border-bottom: 1px solid $black;
+
+  @include tablet {
+    margin-bottom: 30px;
+  }
+
+  @include desktop {
+    margin-bottom: 60px;
+  }
 }
 
 .category-page__filter-title {
   color: $dark-blue;
+  font-size: 14px;
   line-height: 1.3;
 
   @include tablet {
@@ -118,10 +126,17 @@
 .category-page__sort select {
   background-color: $light-pastel;
   border: none;
+  width: 140px;
+  font-size: 14px;
 }
 
 .category-page__filter-btn {
   position: relative;
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
 }
 
 .category-page__filter-item:hover:after {
@@ -135,11 +150,11 @@
   left: 0;
 
   @include tablet {
-    top: 41px;
+    top: 39px;
   }
 
   @include desktop {
-    top: 43px;
+    top: 40px;
   }
 }
 
@@ -157,23 +172,95 @@
   border-radius: 0 0 5px 5px;
 
   @include tablet {
-    top: 42px;
+    top: 40px;
   }
 
   @include desktop {
-    top: 44px;
+    top: 41px;
   }
 }
 
 .goods-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 10px;
+  margin-bottom: 25px;
 
   @include tablet {
     gap: 30px 14px;
+    margin-bottom: 40px;
   }
 
   @include desktop {
     gap: 90px 20px;
+    margin-bottom: 90px;
+  }
+}
+
+.goods-list .single-category__item,
+.goods-list .single-category__item-img,
+.goods-list .single-category__item-about {
+  width: 140px;
+  gap: 2px;
+
+  @include tablet {
+    width: 325px;
+    gap: 5px;
+  }
+
+  @include desktop {
+    width: 295px;
+  }
+}
+
+.goods-list .single-category__item-img {
+  height: 170px;
+
+  @include tablet {
+    height: 300px;
+  }
+
+  @include desktop {
+    height: 310px;
+  }
+}
+
+.goods-list .single-category__item-about {
+  min-width: 140px;
+
+  @include less-then-tablet {
+    margin-bottom: 3px;
+  }
+}
+
+@include less-then-tablet {
+  .goods-list .single-category__item-overlay {
+    top: 125;
+    left: 95;
+  }
+
+  .goods-list .single-category__item-title {
+    font-size: 15px;
+  }
+
+  .goods-list .single-category__item-desc,
+  .goods-list .single-category__item-price {
+    font-size: 12px;
+  }
+
+  .goods-list .modal__body-color-picker {
+    gap: 10px;
+  }
+
+  .goods-list .modal__body-color-item {
+    width: 14px;
+    height: 14px;
+  }
+
+  .goods-list .modal__body-color-item.active {
+    width: 24px;
+    height: 24px;
+    outline-offset: -4px;
   }
 }
