@@ -190,6 +190,7 @@
   @include tablet {
     gap: 30px 14px;
     margin-bottom: 40px;
+    justify-content: unset;
   }
 
   @include desktop {
