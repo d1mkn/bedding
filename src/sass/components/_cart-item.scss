@@ -1,17 +1,23 @@
 .cart__item {
   position: relative;
   display: flex;
-  gap: 20px;
-  padding: 30px 0px;
+  gap: 11px;
+  padding: 15px 0px;
   border-top: 1px solid $light-grey;
 
+  @include tablet {
+    gap: 20px;
+    padding: 25px 0px 20px;
+  }
+
   @include desktop {
-    display: flex;
+    padding: 30px 0px;
   }
 }
 
 .cart__item:last-child {
-  padding-bottom: 0px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
   border-bottom: 1px solid $light-grey;
 
   @include tablet {
@@ -20,11 +26,24 @@
   }
 
   @include desktop {
+    padding-bottom: 0px;
     border-bottom: none;
   }
 }
 
+.cart__item:last-child .cart__item-price {
+  @include tablet {
+    bottom: 30px;
+  }
+
+  @include desktop {
+    bottom: 0;
+  }
+}
+
 .cart__item-img {
+  width: 80px;
+  height: 80px;
   background-color: $pastel;
   border: 1px solid $light-grey;
   border-radius: 5px;
@@ -42,42 +61,94 @@
 
 .cart__item-details {
   display: flex;
+  width: 65%;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 5px;
+
+  @include tablet {
+    width: fit-content;
+    justify-content: space-between;
+    gap: unset;
+  }
 }
 
 .cart__item-title {
   font-weight: 600;
-  font-size: 20px;
-  line-height: calc(24px / 20px);
+  font-size: 15px;
+  line-height: calc(18px / 15px);
+
+  @include tablet {
+    font-size: 20px;
+    line-height: calc(24px / 20px);
+  }
 }
 
-.cart__item-color {
+.cart__item-color,
+.cart__item-size {
   display: flex;
-  gap: 10px;
+  gap: 5px;
+  font-size: 13px;
+  line-height: calc(16px / 13px);
+
+  @include tablet {
+    gap: 10px;
+    font-size: 16px;
+    line-height: calc(20px / 16px);
+  }
+}
+
+.cart__item-size {
+  margin-bottom: 6px;
 }
 
 .cart__item-select-wrap {
-  width: 70px;
-  height: 50px;
+  width: 50px;
+  height: 25px;
   text-align: center;
   background-color: #fff;
   border: 1px solid #7d7d7d;
   border-radius: 5px;
   display: inline-block;
+
+  @include tablet {
+    width: 70px;
+    height: 50px;
+  }
 }
 
 .cart__item-delete-btn {
   position: absolute;
-  top: 35px;
-  right: 0%;
+  width: 10px;
+  height: 10px;
+  top: 15px;
+  right: 0px;
+
+  @include tablet {
+    width: 15px;
+    height: 15px;
+    top: 25px;
+  }
+
+  @include desktop {
+    top: 35px;
+  }
 }
 
 .cart__item-price {
   position: absolute;
-  bottom: 30px;
+  bottom: 10px;
   right: 0%;
   font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: calc(17px / 14px);
+
+  @include tablet {
+    bottom: 20px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @include desktop {
+    bottom: 30px;
+  }
 }
