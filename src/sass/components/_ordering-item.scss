@@ -1,6 +1,8 @@
 .ordering__item {
   position: relative;
   display: flex;
+  gap: 3px;
+  margin-bottom: 10px;
 
   @include tablet {
     gap: 15px;
@@ -15,14 +17,16 @@
 }
 
 .ordering__item:last-child {
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid $light-grey;
+
   @include tablet {
-    margin-bottom: 0px;
-    border-bottom: none;
+    padding-bottom: 15px;
   }
 
   @include desktop {
     padding-bottom: 20px;
-    border-bottom: 1px solid $light-grey;
   }
 }
 
@@ -31,6 +35,8 @@
 }
 
 .ordering__item-img {
+  width: 50px;
+  height: 50px;
   background-color: $pastel;
   border: 1px solid $light-grey;
   border-radius: 5px;
@@ -54,32 +60,29 @@
 }
 
 .ordering__item-title {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: calc(16px / 13px);
+
   @include tablet {
-    font-weight: 600;
     font-size: 16px;
     line-height: calc(20px / 16px);
   }
 
   @include desktop {
-    font-weight: 600;
     font-size: 15px;
     line-height: calc(18px / 15px);
   }
 }
 
 .ordering__item-color-size {
-  font-size: 15px;
-  line-height: calc(18px / 15px);
-}
+  font-size: 10px;
+  line-height: calc(12px / 10px);
 
-.ordering__item-select-wrap {
-  width: 55px;
-  height: 30px;
-  text-align: center;
-  background-color: #fff;
-  border: 1px solid #7d7d7d;
-  border-radius: 5px;
-  display: inline-block;
+  @include tablet {
+    font-size: 15px;
+    line-height: calc(18px / 15px);
+  }
 }
 
 .ordering__item-delete-btn {

@@ -1,9 +1,10 @@
 .ordering-title__wrap {
+  margin-bottom: 15px;
   text-align: center;
   border-bottom: 1px solid $light-grey;
 
   @include tablet {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   @include desktop {
@@ -13,9 +14,10 @@
 
 .ordering__content {
   display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 30px;
 
   @include tablet {
-    flex-direction: column-reverse;
     margin-bottom: 40px;
   }
 
@@ -27,12 +29,13 @@
 }
 
 .ordering-title {
+  margin-bottom: 10px;
   font-weight: 500;
+  font-size: 24px;
+  line-height: calc(29px / 24px);
 
   @include tablet {
     margin-bottom: 20px;
-    font-size: 24px;
-    line-height: calc(29px / 24px);
   }
 
   @include desktop {
@@ -60,9 +63,7 @@
 }
 
 .ordering__form-section {
-  @include tablet {
-    margin-bottom: 20px;
-  }
+  margin-bottom: 20px;
 
   @include desktop {
     margin-bottom: 40px;
@@ -74,13 +75,14 @@
 }
 
 .ordering__form-title {
+  margin-bottom: 15px;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.3;
 
   @include tablet {
-    margin-top: 5px;
     margin-bottom: 10px;
+    font-size: 24px;
   }
 
   @include desktop {
@@ -92,6 +94,7 @@
 .ordering__form-inputs-group {
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
 
   @include tablet {
     gap: 40px 15px;
@@ -108,7 +111,8 @@
 }
 
 .ordering__form-input {
-  min-width: 295px;
+  min-width: 290px;
+  padding: 22px 15px 5px;
   line-height: 1.3;
   border: 1px solid $light-grey;
   border-radius: 5px;
@@ -117,6 +121,7 @@
 
   @include tablet {
     padding: 21.2px 0px 6.5px 25px;
+    min-width: 295px;
   }
 
   @include desktop {
@@ -127,6 +132,7 @@
 .ordering__form-label {
   position: absolute;
   top: 50%;
+  left: 15px;
   transform: translateY(-45%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
@@ -143,8 +149,16 @@
 }
 
 .ordering__form-checkbox-wrap {
-  height: 25px;
-  margin-bottom: 15px;
+  height: 20px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.3;
+
+  @include tablet {
+    height: 25px;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
 }
 
 .selects-wrap {
@@ -153,13 +167,15 @@
 
 .ordering__form-select-wrap {
   display: inline-block;
-  width: 295px;
+  width: 290px;
+  height: 45px;
   background-color: $white;
   border: 1px solid $light-grey;
   border-radius: 5px;
 
   @include tablet {
     height: 50px;
+    width: 295px;
   }
 
   @include desktop {
@@ -172,7 +188,7 @@
 }
 
 .ordering__form-select {
-  padding: 0px 25px;
+  padding: 0px 15px;
   width: 95%;
   height: 100%;
   line-height: 1.3;
@@ -180,32 +196,32 @@
   outline: none;
   background-color: unset;
   cursor: pointer;
+
+  @include tablet {
+    padding: 0px 25px;
+  }
 }
 
 .ordering__form-input:focus + .ordering__form-label,
 .ordering__form-input:not(:placeholder-shown) + .ordering__form-label {
-  transform: translateY(-37px);
+  transform: translateY(-20px);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: $light-grey;
   font-size: 14px;
-
-  @include tablet {
-    transform: translateY(-20px);
-  }
-
-  @include desktop {
-    transform: translateY(-20px);
-  }
 }
 
 .invalid-input-message {
-  position: absolute;
-  font-size: 15px;
+  display: none;
   color: $red;
-  bottom: -5px;
-  transform: translateY(100%);
-  opacity: 0;
-  transition: opacity $transition;
+
+  @include tablet {
+    position: absolute;
+    font-size: 15px;
+    bottom: -5px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: opacity $transition;
+  }
 }
 
 .ordering__form-input:not(:placeholder-shown):invalid {
@@ -238,13 +254,19 @@
 
 .ordering__form-checkbox + label:before {
   content: '';
-  margin-right: 10px;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
   border: 1px solid $light-grey;
   border-radius: 5px;
   background-repeat: no-repeat;
   background-position: center center;
+
+  @include tablet {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+  }
 }
 
 .ordering__form-checkbox:checked + label:before {
@@ -269,13 +291,10 @@
 .ordering__form-input-comment {
   height: 80px;
   padding: 15px;
+  margin-bottom: 10px;
   resize: none;
   border: 1px solid $light-grey;
   border-radius: 5px;
-
-  @include tablet {
-    margin-bottom: 10px;
-  }
 
   @include desktop {
     margin-bottom: 40px;
@@ -287,8 +306,10 @@
 }
 
 .ordering__form-submit {
+  padding: 8px 20px;
   color: $white;
   font-weight: 600;
+  font-size: 15px;
   line-height: 1.3;
   background-color: $main-blue;
   border: 1px solid $light-grey;
@@ -311,13 +332,13 @@
 }
 
 .ordering__content-right {
+  padding: 8px 15px;
   overflow: hidden;
   background-color: $pastel;
+  margin-bottom: 20px;
 
   @include tablet {
     padding: 20px 65px;
-    margin-bottom: 20px;
-    cursor: pointer;
   }
 
   @include desktop {
@@ -328,16 +349,22 @@
 }
 
 .ordering__items-wrap {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+
+  @include tablet {
+    margin-bottom: 15px;
+  }
+
+  @include desktop {
+    margin-bottom: 20px;
+  }
 }
 
 .ordering-items-js {
-  @include tablet {
-    overflow: hidden;
-    margin-top: 0px;
-    max-height: 0px;
-    transition: max-height 1s, margin-top 1s;
-  }
+  overflow: hidden;
+  margin-top: 0px;
+  max-height: 0px;
+  transition: max-height 1s, margin-top 1s;
 
   @include desktop {
     max-height: none;
@@ -348,19 +375,47 @@
 .ordering-items-js.active {
   display: block;
   max-height: 1500px;
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   transition: max-height 1s, margin-top 1s;
+
+  @include tablet {
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
 
   @include desktop {
     margin-top: 0px;
   }
 }
 
+.ordering__details-icon {
+  width: 18px;
+  height: 18px;
+
+  @include tablet {
+    width: auto;
+    height: auto;
+  }
+}
+
 .ordering__details-icon-wrap {
+  display: none;
+  transition: transform $transition;
+
+  @include tablet {
+    display: block;
+    margin-left: 10px;
+  }
+}
+
+.ordering__details-icon-wrap .ordering__details-icon {
   transition: transform $transition;
 }
 
-.ordering-details-js.active .ordering__details-icon-wrap {
+.ordering-details-js.active
+  .ordering__details-icon-wrap
+  .ordering__details-icon {
   transform: rotate(-180deg);
 }
 
@@ -419,17 +474,16 @@
   fill: $em-dark-blue;
 }
 
-.ordering__details-icon {
-  margin-left: 10px;
-  margin-left: 10px;
-}
-
 .ordering__details-text {
   display: flex;
   align-items: center;
   color: $dark-blue;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.3;
+
+  @include tablet {
+    font-size: 16px;
+  }
 }
 
 .ordering__details-text:last-child {
@@ -440,15 +494,24 @@
 
 .pay-on-delivery-info {
   margin-bottom: 15px;
-  padding: 18px 15px;
+  padding: 6px 10px;
   background-color: $pastel;
   border: 1px solid $light-grey;
   border-radius: 5px;
+
+  @include tablet {
+    padding: 18px 15px;
+  }
 }
 
 .pay-on-delivery-info-text {
   margin-bottom: 10px;
+  font-size: 14px;
   line-height: 1.3;
+
+  @include tablet {
+    font-size: 16px;
+  }
 }
 
 .pay-on-delivery-info-text:last-child {
@@ -471,4 +534,20 @@
 
 .m0 {
   margin: 0px;
+}
+
+.mdn {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.tdn {
+  display: block;
+
+  @include tablet {
+    display: none;
+  }
 }
