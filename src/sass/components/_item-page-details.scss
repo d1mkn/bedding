@@ -295,6 +295,10 @@
     padding: 8px 20px;
     font-size: 20px;
   }
+
+  @include desktop {
+    padding: 14px 15px;
+  }
 }
 
 .item__content .faq__question-icon {

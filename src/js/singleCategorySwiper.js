@@ -6,39 +6,8 @@ const swiper = new Swiper('.swiper-container', {
   loop: false,
 
   on: {
-    init: function () {
-      const nextEl = this.navigation.nextEl;
-      const prevEl = this.navigation.prevEl;
-
-      if (nextEl.classList.contains('swiper-button-disabled')) {
-        nextEl.style.opacity = '0.5';
-      } else {
-        nextEl.removeAttribute('style');
-      }
-
-      if (prevEl.classList.contains('swiper-button-disabled')) {
-        prevEl.style.opacity = '0.5';
-      } else {
-        prevEl.removeAttribute('style');
-      }
-    },
-
-    slideChange: function () {
-      const nextEl = this.navigation.nextEl;
-      const prevEl = this.navigation.prevEl;
-
-      if (nextEl.classList.contains('swiper-button-disabled')) {
-        nextEl.style.opacity = '0.5';
-      } else {
-        nextEl.removeAttribute('style');
-      }
-
-      if (prevEl.classList.contains('swiper-button-disabled')) {
-        prevEl.style.opacity = '0.5';
-      } else {
-        prevEl.removeAttribute('style');
-      }
-    },
+    init: navigationBtnStyle.bind(this),
+    slideChange: navigationBtnStyle.bind(this),
   },
 
   breakpoints: {
@@ -99,3 +68,26 @@ prevIcons.forEach(icon => {
     }, 200);
   });
 });
+
+function navigationBtnStyle(swiper) {
+  const nextEl = swiper.navigation.nextEl;
+  const prevEl = swiper.navigation.prevEl;
+
+  if (Array.isArray(nextEl) && Array.isArray(prevEl)) {
+    nextEl[0].classList.contains('swiper-button-disabled')
+      ? (nextEl[0].style.opacity = '0.5')
+      : nextEl[0].removeAttribute('style');
+
+    prevEl[0].classList.contains('swiper-button-disabled')
+      ? (prevEl[0].style.opacity = '0.5')
+      : prevEl[0].removeAttribute('style');
+  } else {
+    nextEl.classList.contains('swiper-button-disabled')
+      ? (nextEl.style.opacity = '0.5')
+      : nextEl.removeAttribute('style');
+
+    prevEl.classList.contains('swiper-button-disabled')
+      ? (prevEl.style.opacity = '0.5')
+      : prevEl.removeAttribute('style');
+  }
+}
