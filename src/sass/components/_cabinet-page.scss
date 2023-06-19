@@ -7,6 +7,7 @@
 }
 
 .cabinet-title__wrap {
+  margin-bottom: 15px;
   text-align: center;
 
   @include tablet {
@@ -20,11 +21,12 @@
 }
 
 .cabinet-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: calc(29px / 24px);
+
   @include tablet {
     margin-bottom: 5px;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: calc(29px / 24px);
   }
 
   @include desktop {
@@ -37,10 +39,13 @@
 
 .cabinet-navigation__wrap {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
 
   @include tablet {
     min-height: 281px;
     justify-content: space-between;
+    flex-direction: row;
   }
 
   @include desktop {
@@ -52,10 +57,11 @@
 
 .cabinet-content {
   display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 30px;
 
   @include tablet {
     margin-bottom: 40px;
-    flex-direction: column-reverse;
     gap: 23px;
   }
 
@@ -68,12 +74,18 @@
 }
 
 .cabinet-navigation__list {
+  display: flex;
+  flex-wrap: wrap;
   height: fit-content;
   border: 1px solid $light-grey;
-  border-radius: 5px;
+  border-bottom: none;
+  border-radius: 0px 0px 5px 5px;
 
   @include tablet {
+    display: block;
     width: 210px;
+    border: 1px solid $light-grey;
+    border-radius: 5px;
   }
 
   @include desktop {
@@ -82,8 +94,13 @@
 }
 
 .cabinet-navigation__item {
+  width: 50%;
   background-color: $white;
   border-bottom: 1px solid $light-grey;
+
+  @include tablet {
+    width: unset;
+  }
 }
 
 .cabinet-navigation__item:first-child {
@@ -91,8 +108,26 @@
 }
 
 .cabinet-navigation__item:last-child {
-  border-bottom: none;
-  border-radius: 0px 5px 5px;
+  border-radius: 0px 0px 5px 0px;
+
+  @include tablet {
+    border-bottom: none;
+    border-radius: 0px 5px 5px;
+  }
+}
+
+.cabinet-navigation__item:nth-last-child(2) {
+  border-radius: 0px 0px 0px 5px;
+
+  @include tablet {
+    border-radius: 0px;
+  }
+}
+
+.cabinet-navigation__item:nth-child(2n) {
+  @include less-then-tablet {
+    border-left: 1px solid $light-grey;
+  }
 }
 
 .cabinet-navigation__item:last-child .cabinet-navigation__button {
@@ -107,11 +142,16 @@
 
 .cabinet-navigation__button {
   width: 100%;
-  text-align: left;
+  padding: 8.5px 0px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.3;
   transition: background-color $transition;
 
   @include tablet {
     padding: 12px 25px;
+    text-align: left;
+    font-size: 16px;
   }
 
   @include desktop {
@@ -125,12 +165,16 @@
 }
 
 .cabinet-navigation__button.active {
+  font-weight: 600;
   background-color: $blue;
 }
 
 .cabinet-content__block {
+  min-height: 251px;
+
   @include tablet {
     width: 436px;
+    min-height: unset;
   }
 
   @include desktop {
@@ -145,16 +189,24 @@
 
 .personal-data__label {
   margin-bottom: 5px;
+  font-size: 15px;
   line-height: 1.3;
+
+  @include tablet {
+    font-size: 16px;
+  }
 }
 
 .personal-data__input {
+  padding: 8px 15px 9px;
+  margin-bottom: 10px;
+  font-size: 15px;
   border: 1px solid $light-grey;
   border-radius: 5px;
 
   @include tablet {
     padding: 12px 25px;
-    margin-bottom: 10px;
+    font-size: 16px;
   }
 
   @include desktop {
@@ -178,16 +230,13 @@
 }
 
 .personal-data__btn {
+  padding: 8px 20px;
   color: $white;
   font-weight: 600;
   line-height: 1.3;
   background-color: $main-blue;
   border: 1px solid $light-grey;
   border-radius: 5px;
-
-  @include tablet {
-    padding: 8px 20px;
-  }
 
   @include desktop {
     padding: 9.5px 30px;
@@ -197,13 +246,16 @@
 
 .cabinet-contacts {
   height: fit-content;
+  margin-bottom: 15px;
+  padding: 11px 0px;
   background-color: $blue;
   border: 1px solid $light-grey;
   border-radius: 5px;
+  text-align: center;
 
   @include tablet {
+    margin-bottom: 0px;
     padding: 10px 0px;
-    text-align: center;
   }
 
   @include desktop {
@@ -213,11 +265,14 @@
 }
 
 .cabinet-contacts__text {
+  margin-bottom: 10px;
   font-weight: 600;
+  font-size: 15px;
   line-height: 1.3;
 
   @include tablet {
     margin-bottom: 8px;
+    font-size: 16px;
   }
 
   @include desktop {
@@ -226,16 +281,23 @@
 }
 
 .cabinet-contacts__phone {
-  position: relative;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  @include tablet {
+    position: relative;
+    display: block;
+    text-align: center;
+  }
 }
 
 .cabinet-contacts__icon {
-  position: absolute;
   height: 15px;
   fill: $black;
 
   @include tablet {
+    position: absolute;
     left: 172px;
   }
 
@@ -246,6 +308,7 @@
 
 .cabinet-contacts__list {
   display: flex;
+  gap: 10px;
 
   @include tablet {
     justify-content: center;
@@ -260,5 +323,10 @@
 
 .cabinet-contacts__link {
   font-weight: 600;
+  font-size: 15px;
   line-height: 1.3;
+
+  @include tablet {
+    font-size: 16px;
+  }
 }
