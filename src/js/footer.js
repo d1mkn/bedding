@@ -5,15 +5,15 @@ const sections = refs.footerSections;
 window.addEventListener('resize', checkInnerWidth);
 
 function checkInnerWidth() {
-  if (document.documentElement.clientWidth > 767) {
-    refs.catalogList.classList.remove('visually-hidden');
-    refs.infoList.classList.remove('visually-hidden');
-    refs.contactsList.classList.remove('visually-hidden');
-    return;
-  } else {
+  if (document.documentElement.clientWidth < 767) {
     refs.catalogList.classList.add('visually-hidden');
     refs.infoList.classList.add('visually-hidden');
     refs.contactsList.classList.add('visually-hidden');
+    return;
+  } else {
+    refs.catalogList.classList.remove('visually-hidden');
+    refs.infoList.classList.remove('visually-hidden');
+    refs.contactsList.classList.remove('visually-hidden');
   }
 }
 
