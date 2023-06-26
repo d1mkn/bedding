@@ -181,8 +181,11 @@
 }
 
 .modal__body-color-item {
-  width: 24px;
-  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
   background-color: $white;
   border: 1px solid $light-grey;
   border-radius: 50%;
@@ -198,6 +201,12 @@
   height: 36px;
   outline: 1px solid $light-grey;
   outline-offset: -6px;
+}
+
+.modal__body-color-item div {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
 }
 
 .modal__body-size-wrap {

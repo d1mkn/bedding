@@ -1,14 +1,11 @@
-.single-category__sale-item-link:before {
-  content: 'Акція';
+.single-category__sale-item {
+  z-index: 1;
   position: absolute;
-  left: -5.76%;
-  top: 1.92%;
+  left: 15px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 71px;
-  height: 46px;
 
   color: $white;
   font-weight: 700;
@@ -16,11 +13,14 @@
   line-height: 130%;
   background-color: $blue;
   border-radius: 100px;
-  transform: translateY(-50%) rotate(-25deg);
+  transform: translateY(-50%);
 
   @include tablet {
-    width: 72px;
-    height: 47px;
+    padding: 9.5px 10px;
+  }
+
+  @include desktop {
+    padding: 13px 11px;
   }
 }
 
