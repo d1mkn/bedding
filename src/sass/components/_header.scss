@@ -138,7 +138,7 @@ header {
   }
 }
 
-.header__controls-item.cart {
+.cart-link {
   position: relative;
 }
 
@@ -147,21 +147,26 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  top: -7px;
-  right: -3px;
+  top: -5px;
+  left: 13px;
   min-width: 13px;
-  min-height: 13px;
-  padding: 0.5px 5.5px;
+  height: 13px;
+  padding-top: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
   background-color: $dark-blue;
   border-radius: 20px;
   color: $white;
   font-weight: 600;
   font-size: 10px;
+  pointer-events: none;
 
   @include tablet {
-    top: 15px;
     min-width: 17px;
-    min-height: 17px;
+    height: 17px;
+    top: 15px;
+    left: 10px;
+    padding: 0.5px 5.5px;
     font-size: 13px;
   }
 }
